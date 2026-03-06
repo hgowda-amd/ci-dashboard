@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-03-06T01:21:40.234Z",
+  "lastRefresh": "2026-03-06T05:13:44.235Z",
   "periodDays": 14,
   "totalFailures": 496,
-  "totalPRs": 11,
+  "totalPRs": 10,
   "confirmedFlakyCount": 95,
-  "mergedDespiteFailureCount": 56,
+  "mergedDespiteFailureCount": 55,
   "failedTests": [
     {
       "name": "Containers with shared volume",
@@ -1205,13 +1205,14 @@
     {
       "name": "Verify nginx connectivity between pods",
       "file": "k8s-nginx-connectivity.bats",
-      "totalFailures": 10,
-      "flakyCount": 10,
+      "totalFailures": 12,
+      "flakyCount": 12,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
       "uniqueDates": [
+        "2026-03-06",
         "2026-03-05",
         "2026-03-04",
         "2026-03-03"
@@ -1220,8 +1221,8 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "count": 6,
-          "flakyCount": 6,
+          "count": 8,
+          "flakyCount": 8,
           "mergedCount": 0
         },
         {
@@ -1233,6 +1234,30 @@
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-03-06",
+          "prNumber": "12623",
+          "prTitle": "runtime-rs: Fix dragonball's flaky unit tests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobId": "65968260055",
+          "runId": "22744824321",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-03-06",
+          "prNumber": "12623",
+          "prTitle": "runtime-rs: Fix dragonball's flaky unit tests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobId": "65968260055",
+          "runId": "22744824321",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
         {
           "date": "2026-03-05",
           "prNumber": "12579",
@@ -6372,7 +6397,7 @@
       "name": "Scale nginx deployment",
       "file": "k8s-scale-nginx.bats",
       "totalFailures": 4,
-      "flakyCount": 2,
+      "flakyCount": 4,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -6386,7 +6411,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "count": 2,
-          "flakyCount": 0,
+          "flakyCount": 2,
           "mergedCount": 0
         },
         {
@@ -6407,7 +6432,7 @@
           "jobId": "65886795668",
           "runId": "22720978409",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -6419,7 +6444,7 @@
           "jobId": "65886795668",
           "runId": "22720978409",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -8425,54 +8450,6 @@
       ]
     },
     {
-      "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set (with initdata)",
-      "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
-      "flakyCount": 0,
-      "mergedCount": 2,
-      "isConfirmedFlaky": false,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-03-03"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 2
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-03-03",
-          "prNumber": "12615",
-          "prTitle": "tests: k8s: basic test for subPathExpr",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "65624759715",
-          "runId": "22641824727",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2026-03-03",
-          "prNumber": "12615",
-          "prTitle": "tests: k8s: basic test for subPathExpr",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "65624759715",
-          "runId": "22641824727",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        }
-      ]
-    },
-    {
       "name": "Policy failure: unexpected container command",
       "file": "k8s-policy-rc.bats",
       "totalFailures": 1,
@@ -8654,9 +8631,9 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 97,
+    "totalFailedTests": 96,
     "confirmedFlaky": 95,
-    "mergedDespiteFailure": 56,
+    "mergedDespiteFailure": 55,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -8707,7 +8684,7 @@
       },
       {
         "date": "2026-03-03",
-        "failures": 204
+        "failures": 202
       },
       {
         "date": "2026-03-04",
@@ -8719,7 +8696,7 @@
       },
       {
         "date": "2026-03-06",
-        "failures": 0
+        "failures": 2
       }
     ],
     "jobBreakdown": [
@@ -8733,9 +8710,9 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "count": 112,
+        "count": 110,
         "flakyCount": 110,
-        "mergedCount": 2
+        "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
@@ -8748,7 +8725,7 @@
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "count": 14,
-        "flakyCount": 12,
+        "flakyCount": 14,
         "mergedCount": 0
       },
       {
@@ -8782,8 +8759,8 @@
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-        "count": 6,
-        "flakyCount": 6,
+        "count": 8,
+        "flakyCount": 8,
         "mergedCount": 0
       },
       {
