@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-03-07T08:24:37.463Z",
+  "lastRefresh": "2026-03-07T12:31:07.911Z",
   "periodDays": 14,
-  "totalFailures": 284,
+  "totalFailures": 286,
   "totalPRs": 8,
   "confirmedFlakyCount": 51,
-  "mergedDespiteFailureCount": 5,
+  "mergedDespiteFailureCount": 4,
   "failedTests": [
     {
       "name": "Containers with shared volume",
@@ -1156,13 +1156,14 @@
     {
       "name": "Test we can pull a large image inside the guest with large createcontainer timeout",
       "file": "k8s-guest-pull-image.bats",
-      "totalFailures": 6,
+      "totalFailures": 10,
       "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
-      "uniquePRs": 3,
+      "uniquePRs": 4,
       "uniqueDates": [
+        "2026-03-07",
         "2026-03-06",
         "2026-03-05",
         "2026-03-04"
@@ -1171,12 +1172,67 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "count": 6,
+          "count": 8,
           "flakyCount": 2,
           "mergedCount": 2
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-03-07",
+          "prNumber": "12637",
+          "prTitle": "versions: Bump rust to 1.92",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobId": "66129138208",
+          "runId": "22794894088",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-03-07",
+          "prNumber": "12637",
+          "prTitle": "versions: Bump rust to 1.92",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobId": "66129138208",
+          "runId": "22794894088",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-03-07",
+          "prNumber": "12637",
+          "prTitle": "versions: Bump rust to 1.92",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "66129138209",
+          "runId": "22794894088",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-03-07",
+          "prNumber": "12637",
+          "prTitle": "versions: Bump rust to 1.92",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "66129138209",
+          "runId": "22794894088",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
         {
           "date": "2026-03-06",
           "prNumber": "12633",
@@ -1254,16 +1310,15 @@
     {
       "name": "Verify nginx connectivity between pods",
       "file": "k8s-nginx-connectivity.bats",
-      "totalFailures": 6,
-      "flakyCount": 6,
-      "mergedCount": 2,
+      "totalFailures": 4,
+      "flakyCount": 4,
+      "mergedCount": 0,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 3,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 2,
       "uniqueDates": [
         "2026-03-06",
-        "2026-03-05",
-        "2026-03-04"
+        "2026-03-05"
       ],
       "affectedJobs": [
         {
@@ -1272,13 +1327,6 @@
           "count": 4,
           "flakyCount": 4,
           "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -1329,30 +1377,6 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
-        },
-        {
-          "date": "2026-03-04",
-          "prNumber": "12542",
-          "prTitle": "genpolicy: settings.d drop-ins and scenario example drop-ins",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "65752294185",
-          "runId": "22679414401",
-          "runAttempt": 2,
-          "isFlaky": true,
-          "prMerged": true
-        },
-        {
-          "date": "2026-03-04",
-          "prNumber": "12542",
-          "prTitle": "genpolicy: settings.d drop-ins and scenario example drop-ins",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "65752294185",
-          "runId": "22679414401",
-          "runAttempt": 2,
-          "isFlaky": true,
-          "prMerged": true
         }
       ]
     },
@@ -5883,11 +5907,11 @@
   "summary": {
     "totalFailedTests": 90,
     "confirmedFlaky": 51,
-    "mergedDespiteFailure": 5,
+    "mergedDespiteFailure": 4,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-      "count": 110,
+      "count": 112,
       "flakyCount": 0,
       "mergedCount": 0
     },
@@ -5934,7 +5958,7 @@
       },
       {
         "date": "2026-03-04",
-        "failures": 4
+        "failures": 2
       },
       {
         "date": "2026-03-05",
@@ -5946,21 +5970,21 @@
       },
       {
         "date": "2026-03-07",
-        "failures": 0
+        "failures": 4
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "count": 110,
+        "count": 112,
         "flakyCount": 0,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "count": 94,
+        "count": 96,
         "flakyCount": 90,
         "mergedCount": 2
       },
