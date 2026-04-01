@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-04-01T01:32:26.458Z",
+  "lastRefresh": "2026-04-01T05:56:40.401Z",
   "periodDays": 14,
   "totalFailures": 68,
-  "totalPRs": 7,
+  "totalPRs": 6,
   "confirmedFlakyCount": 17,
-  "mergedDespiteFailureCount": 1,
+  "mergedDespiteFailureCount": 0,
   "failedTests": [
     {
       "name": "Empty dir volume when FSGroup is specified with non-root container",
@@ -375,27 +375,26 @@
     {
       "name": "setup_file failed",
       "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 6,
+      "totalFailures": 4,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 0,
       "isConfirmedFlaky": false,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
       "uniqueDates": [
-        "2026-03-30",
-        "2026-03-27"
+        "2026-03-30"
       ],
       "affectedJobs": [
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 4,
-          "flakyCount": 0,
-          "mergedCount": 2
-        },
-        {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "count": 2,
           "flakyCount": 0,
           "mergedCount": 0
@@ -449,30 +448,54 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
-        },
+        }
+      ]
+    },
+    {
+      "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+      "file": "k8s-measured-rootfs.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-04-01"
+      ],
+      "affectedJobs": [
         {
-          "date": "2026-03-27",
-          "prNumber": "12683",
-          "prTitle": "runtime: allow specifying logical/physical sector size for block devices",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "68903978915",
-          "runId": "23652231349",
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-04-01",
+          "prNumber": "12752",
+          "prTitle": "helm: add overheadEnabled switch for runtimeclass",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobId": "69465507666",
+          "runId": "23831055512",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": true
+          "prMerged": false
         },
         {
-          "date": "2026-03-27",
-          "prNumber": "12683",
-          "prTitle": "runtime: allow specifying logical/physical sector size for block devices",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "68903978915",
-          "runId": "23652231349",
+          "date": "2026-04-01",
+          "prNumber": "12752",
+          "prTitle": "helm: add overheadEnabled switch for runtimeclass",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobId": "69465507666",
+          "runId": "23831055512",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": true
+          "prMerged": false
         }
       ]
     },
@@ -1390,9 +1413,9 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 22,
+    "totalFailedTests": 23,
     "confirmedFlaky": 17,
-    "mergedDespiteFailure": 1,
+    "mergedDespiteFailure": 0,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev, kubeadm)",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev, kubeadm)",
@@ -1435,7 +1458,7 @@
       },
       {
         "date": "2026-03-27",
-        "failures": 2
+        "failures": 0
       },
       {
         "date": "2026-03-28",
@@ -1455,7 +1478,7 @@
       },
       {
         "date": "2026-04-01",
-        "failures": 0
+        "failures": 2
       }
     ],
     "jobBreakdown": [
@@ -1469,7 +1492,7 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "count": 12,
+        "count": 14,
         "flakyCount": 0,
         "mergedCount": 0
       },
@@ -1495,15 +1518,15 @@
         "mergedCount": 0
       },
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 4,
-        "flakyCount": 0,
-        "mergedCount": 2
-      },
-      {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+        "count": 2,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "count": 2,
         "flakyCount": 0,
         "mergedCount": 0
