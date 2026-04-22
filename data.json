@@ -1,5 +1,5 @@
 {
-  "lastRefresh": "2026-04-22T01:32:44.428Z",
+  "lastRefresh": "2026-04-22T05:26:53.519Z",
   "sections": [
     {
       "id": "nvidia-gpu",
@@ -19,7 +19,7 @@
           "isRequired": true,
           "duration": "13m 59s",
           "lastFailure": "Never",
-          "lastSuccess": "Just now",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -136,7 +136,7 @@
           "isRequired": false,
           "duration": "26m 40s",
           "lastFailure": "5 days ago",
-          "lastSuccess": "Just now",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -321,15 +321,15 @@
           "name": "non-TEE with nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "required"
           ],
           "isRequired": true,
-          "duration": "N/A",
+          "duration": "52m 30s",
           "lastFailure": "4/15/2026",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -476,10 +476,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177265",
-              "duration": "N/A",
+              "duration": "52m 30s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -542,14 +542,14 @@
           "name": "AMD SEV-SNP with nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee",
             "required"
           ],
           "isRequired": true,
-          "duration": "N/A",
-          "lastFailure": "2 days ago",
+          "duration": "64m 40s",
+          "lastFailure": "4h ago",
           "lastSuccess": "Yesterday",
           "weatherHistory": [
             {
@@ -695,15 +695,39 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "24753582597",
               "jobId": "72423177276",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "64m 40s",
+              "failureStep": "k8s-measured-rootfs.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 1,
+                    "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+                    "comment": "",
+                    "file": "k8s-measured-rootfs.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+                    "comment": "",
+                    "file": "##[group]k8s-measured-rootfs.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 270,
+                  "passed": 268,
+                  "failed": 2,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-measured-rootfs.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 4,
+          "failureCount": 5,
           "failedTestsInWeather": [
             {
               "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
@@ -724,13 +748,50 @@
               "files": [
                 "k8s-guest-pull-image-signature.bats"
               ]
+            },
+            {
+              "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+              "count": 1,
+              "dates": [
+                "2026-04-22"
+              ],
+              "files": [
+                "k8s-measured-rootfs.bats"
+              ]
             }
           ],
           "retried": 0,
           "setupRetry": false,
           "runId": "24753582597",
           "jobId": "72423177276",
-          "error": null,
+          "error": {
+            "step": "k8s-measured-rootfs.bats, ##[group]k8s-measured-rootfs.bats",
+            "batsFiles": [
+              "k8s-measured-rootfs.bats",
+              "##[group]k8s-measured-rootfs.bats"
+            ],
+            "testResults": {
+              "total": 270,
+              "passed": 268,
+              "failed": 2,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 1,
+                "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+                "comment": "",
+                "file": "k8s-measured-rootfs.bats"
+              },
+              {
+                "number": 1,
+                "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+                "comment": "",
+                "file": "##[group]k8s-measured-rootfs.bats"
+              }
+            ],
+            "output": "not ok 1 - Test cannot launch pod with measured boot enabled and incorrect hash\nnot ok 1 - Test cannot launch pod with measured boot enabled and incorrect hash"
+          },
           "maintainers": [
             "@AdithyaKrishnan",
             "@hgowda-amd"
@@ -747,7 +808,7 @@
           ],
           "isRequired": false,
           "duration": "35m 46s",
-          "lastFailure": "Just now",
+          "lastFailure": "4h ago",
           "lastSuccess": "4/14/2026",
           "weatherHistory": [
             {
@@ -901,7 +962,7 @@
           "isRequired": true,
           "duration": "30m 27s",
           "lastFailure": "4/15/2026",
-          "lastSuccess": "Just now",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -1075,7 +1136,7 @@
           "isRequired": false,
           "duration": "26m 40s",
           "lastFailure": "5 days ago",
-          "lastSuccess": "Just now",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -1253,14 +1314,14 @@
           "name": "non-TEE with force guest pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, experimental-force-guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, experimental-force-guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "49m 49s",
           "lastFailure": "4/15/2026",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -1407,10 +1468,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177263",
-              "duration": "N/A",
+              "duration": "49m 49s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -1472,15 +1533,15 @@
           "name": "non-TEE with runtime-rs and nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "required"
           ],
           "isRequired": true,
-          "duration": "N/A",
+          "duration": "44m 28s",
           "lastFailure": "Yesterday",
-          "lastSuccess": "2 days ago",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -1651,10 +1712,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177284",
-              "duration": "N/A",
+              "duration": "44m 28s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -1852,7 +1913,7 @@
           "isRequired": false,
           "duration": "0m 5s",
           "lastFailure": "Never",
-          "lastSuccess": "19h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -1968,8 +2029,8 @@
           ],
           "isRequired": false,
           "duration": "0m 11s",
-          "lastFailure": "19h ago",
-          "lastSuccess": "18h ago",
+          "lastFailure": "23h ago",
+          "lastSuccess": "22h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -2085,8 +2146,8 @@
           ],
           "isRequired": false,
           "duration": "0m 9s",
-          "lastFailure": "19h ago",
-          "lastSuccess": "18h ago",
+          "lastFailure": "23h ago",
+          "lastSuccess": "22h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -2202,14 +2263,14 @@
           "name": "k0s · qemu-coco-dev · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "Yesterday",
+          "duration": "52m 38s",
+          "lastFailure": "4h ago",
           "lastSuccess": "Never",
           "weatherHistory": [
             {
@@ -2644,20 +2705,57 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "24753582597",
               "jobId": "72423177402",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "52m 38s",
+              "failureStep": "k8s-liveness-probes.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "##[group]k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 270,
+                  "passed": 266,
+                  "failed": 4,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-liveness-probes.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 9,
+          "failureCount": 10,
           "failedTestsInWeather": [
             {
               "name": "Liveness http probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -2674,8 +2772,9 @@
             },
             {
               "name": "Liveness tcp probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -2715,7 +2814,46 @@
           "setupRetry": false,
           "runId": "24753582597",
           "jobId": "72423177402",
-          "error": null,
+          "error": {
+            "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+            "batsFiles": [
+              "k8s-liveness-probes.bats",
+              "##[group]k8s-liveness-probes.bats"
+            ],
+            "testResults": {
+              "total": 270,
+              "passed": 266,
+              "failed": 4,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "##[group]k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              }
+            ],
+            "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+          },
           "maintainers": [
             "@stevenhorsman",
             "@wainersm"
@@ -2726,15 +2864,15 @@
           "name": "k0s · qemu-coco-dev · experimental force guest pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, experimental-force-guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, experimental-force-guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "57m 4s",
           "lastFailure": "2 days ago",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -2892,10 +3030,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177400",
-              "duration": "N/A",
+              "duration": "57m 4s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -2957,14 +3095,14 @@
           "name": "k0s · runtime-rs · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "Yesterday",
+          "duration": "46m 31s",
+          "lastFailure": "4h ago",
           "lastSuccess": "Never",
           "weatherHistory": [
             {
@@ -3399,20 +3537,57 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "24753582597",
               "jobId": "72423177395",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "46m 31s",
+              "failureStep": "k8s-liveness-probes.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "##[group]k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 270,
+                  "passed": 266,
+                  "failed": 4,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-liveness-probes.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 9,
+          "failureCount": 10,
           "failedTestsInWeather": [
             {
               "name": "Liveness http probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -3429,8 +3604,9 @@
             },
             {
               "name": "Liveness tcp probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -3470,7 +3646,46 @@
           "setupRetry": false,
           "runId": "24753582597",
           "jobId": "72423177395",
-          "error": null,
+          "error": {
+            "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+            "batsFiles": [
+              "k8s-liveness-probes.bats",
+              "##[group]k8s-liveness-probes.bats"
+            ],
+            "testResults": {
+              "total": 270,
+              "passed": 266,
+              "failed": 4,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "##[group]k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              }
+            ],
+            "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+          },
           "maintainers": [
             "@pmores",
             "@lifupan"
@@ -3481,15 +3696,15 @@
           "name": "k3s · qemu-coco-dev · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "54m 27s",
           "lastFailure": "6 days ago",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -3634,10 +3849,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177401",
-              "duration": "N/A",
+              "duration": "54m 27s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -3690,15 +3905,15 @@
           "name": "k3s · qemu-coco-dev · experimental force guest pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, experimental-force-guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, experimental-force-guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "56m 33s",
           "lastFailure": "3 days ago",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -3843,10 +4058,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177393",
-              "duration": "N/A",
+              "duration": "56m 33s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -3898,14 +4113,14 @@
           "name": "k3s · runtime-rs · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "Yesterday",
+          "duration": "53m 27s",
+          "lastFailure": "4h ago",
           "lastSuccess": "2 days ago",
           "weatherHistory": [
             {
@@ -4051,16 +4266,51 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "24753582597",
               "jobId": "72423177414",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "53m 27s",
+              "failureStep": "k8s-cron-job.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 1,
+                    "name": "Run a cron job to completion",
+                    "comment": "",
+                    "file": "k8s-cron-job.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Run a cron job to completion",
+                    "comment": "",
+                    "file": "##[group]k8s-cron-job.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 270,
+                  "passed": 268,
+                  "failed": 2,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-cron-job.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 2,
+          "failureCount": 3,
           "failedTestsInWeather": [
+            {
+              "name": "Run a cron job to completion",
+              "count": 2,
+              "dates": [
+                "2026-04-22",
+                "2026-04-21"
+              ],
+              "files": [
+                "k8s-cron-job.bats"
+              ]
+            },
             {
               "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
               "count": 1,
@@ -4080,23 +4330,40 @@
               "files": [
                 "k8s-guest-pull-image-signature.bats"
               ]
-            },
-            {
-              "name": "Run a cron job to completion",
-              "count": 1,
-              "dates": [
-                "2026-04-21"
-              ],
-              "files": [
-                "k8s-cron-job.bats"
-              ]
             }
           ],
           "retried": 0,
           "setupRetry": false,
           "runId": "24753582597",
           "jobId": "72423177414",
-          "error": null,
+          "error": {
+            "step": "k8s-cron-job.bats, ##[group]k8s-cron-job.bats",
+            "batsFiles": [
+              "k8s-cron-job.bats",
+              "##[group]k8s-cron-job.bats"
+            ],
+            "testResults": {
+              "total": 270,
+              "passed": 268,
+              "failed": 2,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 1,
+                "name": "Run a cron job to completion",
+                "comment": "",
+                "file": "k8s-cron-job.bats"
+              },
+              {
+                "number": 1,
+                "name": "Run a cron job to completion",
+                "comment": "",
+                "file": "##[group]k8s-cron-job.bats"
+              }
+            ],
+            "output": "not ok 1 - Run a cron job to completion\nnot ok 1 - Run a cron job to completion"
+          },
           "maintainers": [
             "@pmores",
             "@lifupan"
@@ -4107,15 +4374,15 @@
           "name": "rke2 · qemu-coco-dev · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "54m 32s",
           "lastFailure": "4/15/2026",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -4236,10 +4503,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177417",
-              "duration": "N/A",
+              "duration": "54m 32s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -4282,15 +4549,15 @@
           "name": "rke2 · qemu-coco-dev · experimental force guest pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, experimental-force-guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, experimental-force-guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "53m 5s",
           "lastFailure": "6 days ago",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -4411,10 +4678,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177419",
-              "duration": "N/A",
+              "duration": "53m 5s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -4456,14 +4723,14 @@
           "name": "rke2 · runtime-rs · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "4/15/2026",
+          "duration": "51m 39s",
+          "lastFailure": "4h ago",
           "lastSuccess": "Yesterday",
           "weatherHistory": [
             {
@@ -4609,15 +4876,51 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "24753582597",
               "jobId": "72423177421",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "51m 39s",
+              "failureStep": "k8s-guest-pull-image-authenticated.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 5,
+                    "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 6,
+                    "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 5,
+                    "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                    "comment": "",
+                    "file": "##[group]k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 6,
+                    "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 270,
+                  "passed": 266,
+                  "failed": 4,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-guest-pull-image-authenticated.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 2,
+          "failureCount": 3,
           "failedTestsInWeather": [
             {
               "name": "Test OOM events for pods",
@@ -4648,13 +4951,72 @@
               "files": [
                 "k8s-guest-pull-image-signature.bats"
               ]
+            },
+            {
+              "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+              "count": 1,
+              "dates": [
+                "2026-04-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-authenticated.bats"
+              ]
+            },
+            {
+              "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+              "count": 1,
+              "dates": [
+                "2026-04-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-authenticated.bats"
+              ]
             }
           ],
           "retried": 0,
           "setupRetry": false,
           "runId": "24753582597",
           "jobId": "72423177421",
-          "error": null,
+          "error": {
+            "step": "k8s-guest-pull-image-authenticated.bats, ##[group]k8s-guest-pull-image-authenticated.bats",
+            "batsFiles": [
+              "k8s-guest-pull-image-authenticated.bats",
+              "##[group]k8s-guest-pull-image-authenticated.bats"
+            ],
+            "testResults": {
+              "total": 270,
+              "passed": 266,
+              "failed": 4,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 5,
+                "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-authenticated.bats"
+              },
+              {
+                "number": 6,
+                "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-authenticated.bats"
+              },
+              {
+                "number": 5,
+                "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                "comment": "",
+                "file": "##[group]k8s-guest-pull-image-authenticated.bats"
+              },
+              {
+                "number": 6,
+                "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-authenticated.bats"
+              }
+            ],
+            "output": "not ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 6 - Test that creating a container from an authenticated image, with no credentials fails (with initdata)\nnot ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 6 - Test that creating a container from an authenticated image, with no credentials fails (with initdata)"
+          },
           "maintainers": [
             "@pmores",
             "@lifupan"
@@ -4665,14 +5027,14 @@
           "name": "microk8s · qemu-coco-dev · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "Yesterday",
+          "duration": "58m 18s",
+          "lastFailure": "4h ago",
           "lastSuccess": "Never",
           "weatherHistory": [
             {
@@ -5317,20 +5679,57 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "24753582597",
               "jobId": "72423177409",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "58m 18s",
+              "failureStep": "k8s-liveness-probes.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "##[group]k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 270,
+                  "passed": 266,
+                  "failed": 4,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-liveness-probes.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 9,
+          "failureCount": 10,
           "failedTestsInWeather": [
             {
               "name": "Liveness http probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -5347,8 +5746,9 @@
             },
             {
               "name": "Liveness tcp probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -5531,7 +5931,46 @@
           "setupRetry": false,
           "runId": "24753582597",
           "jobId": "72423177409",
-          "error": null,
+          "error": {
+            "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+            "batsFiles": [
+              "k8s-liveness-probes.bats",
+              "##[group]k8s-liveness-probes.bats"
+            ],
+            "testResults": {
+              "total": 270,
+              "passed": 266,
+              "failed": 4,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "##[group]k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              }
+            ],
+            "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+          },
           "maintainers": [
             "@stevenhorsman",
             "@wainersm"
@@ -5542,15 +5981,15 @@
           "name": "microk8s · qemu-coco-dev · experimental force guest pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, experimental-force-guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, experimental-force-guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "54m 11s",
           "lastFailure": "4/15/2026",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -5671,10 +6110,10 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "24753582597",
               "jobId": "72423177415",
-              "duration": "N/A",
+              "duration": "54m 11s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -5716,14 +6155,14 @@
           "name": "microk8s · runtime-rs · nydus · guest-pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee",
             "autogen_policy"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "Yesterday",
+          "duration": "46m 14s",
+          "lastFailure": "4h ago",
           "lastSuccess": "Never",
           "weatherHistory": [
             {
@@ -6158,20 +6597,57 @@
             },
             {
               "date": "2026-04-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "24753582597",
               "jobId": "72423177416",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "46m 14s",
+              "failureStep": "k8s-liveness-probes.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Liveness http probe",
+                    "comment": "",
+                    "file": "##[group]k8s-liveness-probes.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Liveness tcp probe",
+                    "comment": "",
+                    "file": "k8s-liveness-probes.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 270,
+                  "passed": 266,
+                  "failed": 4,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-liveness-probes.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 9,
+          "failureCount": 10,
           "failedTestsInWeather": [
             {
               "name": "Liveness http probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -6188,8 +6664,9 @@
             },
             {
               "name": "Liveness tcp probe",
-              "count": 9,
+              "count": 10,
               "dates": [
+                "2026-04-22",
                 "2026-04-21",
                 "2026-04-20",
                 "2026-04-19",
@@ -6229,7 +6706,46 @@
           "setupRetry": false,
           "runId": "24753582597",
           "jobId": "72423177416",
-          "error": null,
+          "error": {
+            "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+            "batsFiles": [
+              "k8s-liveness-probes.bats",
+              "##[group]k8s-liveness-probes.bats"
+            ],
+            "testResults": {
+              "total": 270,
+              "passed": 266,
+              "failed": 4,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              },
+              {
+                "number": 2,
+                "name": "Liveness http probe",
+                "comment": "",
+                "file": "##[group]k8s-liveness-probes.bats"
+              },
+              {
+                "number": 3,
+                "name": "Liveness tcp probe",
+                "comment": "",
+                "file": "k8s-liveness-probes.bats"
+              }
+            ],
+            "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+          },
           "maintainers": [
             "@pmores",
             "@lifupan"
@@ -6254,7 +6770,7 @@
           "isRequired": false,
           "duration": "0m 7s",
           "lastFailure": "2 days ago",
-          "lastSuccess": "19h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -6371,7 +6887,7 @@
           "isRequired": false,
           "duration": "0m 5s",
           "lastFailure": "Never",
-          "lastSuccess": "19h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -6487,8 +7003,8 @@
           ],
           "isRequired": false,
           "duration": "0m 11s",
-          "lastFailure": "19h ago",
-          "lastSuccess": "18h ago",
+          "lastFailure": "23h ago",
+          "lastSuccess": "22h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -6604,8 +7120,8 @@
           ],
           "isRequired": false,
           "duration": "0m 9s",
-          "lastFailure": "19h ago",
-          "lastSuccess": "18h ago",
+          "lastFailure": "23h ago",
+          "lastSuccess": "22h ago",
           "weatherHistory": [
             {
               "date": "2026-04-13T00:00:00.000Z",
@@ -6729,8 +7245,8 @@
         ],
         "isRequired": false,
         "duration": "0m 11s",
-        "lastFailure": "19h ago",
-        "lastSuccess": "18h ago",
+        "lastFailure": "23h ago",
+        "lastSuccess": "22h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -6846,8 +7362,8 @@
         ],
         "isRequired": false,
         "duration": "0m 9s",
-        "lastFailure": "19h ago",
-        "lastSuccess": "18h ago",
+        "lastFailure": "23h ago",
+        "lastSuccess": "22h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -6964,7 +7480,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "19h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7080,7 +7596,7 @@
         "isRequired": false,
         "duration": "0m 7s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "19h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7196,7 +7712,7 @@
         "isRequired": true,
         "duration": "0m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7307,7 +7823,7 @@
         "isRequired": false,
         "duration": "0m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7418,7 +7934,7 @@
         "isRequired": false,
         "duration": "0m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7531,7 +8047,7 @@
         "isRequired": true,
         "duration": "0m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7644,7 +8160,7 @@
         "isRequired": true,
         "duration": "1m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7757,7 +8273,7 @@
         "isRequired": false,
         "duration": "0m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7870,7 +8386,7 @@
         "isRequired": true,
         "duration": "0m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -7983,7 +8499,7 @@
         "isRequired": true,
         "duration": "0m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8094,7 +8610,7 @@
         "isRequired": false,
         "duration": "0m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8207,7 +8723,7 @@
         "isRequired": true,
         "duration": "0m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8321,7 +8837,7 @@
         "isRequired": true,
         "duration": "0m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8434,7 +8950,7 @@
         "isRequired": true,
         "duration": "0m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8547,7 +9063,7 @@
         "isRequired": true,
         "duration": "0m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8661,7 +9177,7 @@
         "isRequired": true,
         "duration": "0m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8774,7 +9290,7 @@
         "isRequired": false,
         "duration": "0m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8885,7 +9401,7 @@
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -8998,7 +9514,7 @@
         "isRequired": true,
         "duration": "0m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9112,7 +9628,7 @@
         "isRequired": true,
         "duration": "0m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9225,7 +9741,7 @@
         "isRequired": false,
         "duration": "0m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9338,7 +9854,7 @@
         "isRequired": true,
         "duration": "0m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9449,7 +9965,7 @@
         "isRequired": false,
         "duration": "1m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9560,7 +10076,7 @@
         "isRequired": false,
         "duration": "1m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9671,7 +10187,7 @@
         "isRequired": false,
         "duration": "1m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9784,7 +10300,7 @@
         "isRequired": false,
         "duration": "1m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -9897,7 +10413,7 @@
         "isRequired": false,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10008,7 +10524,7 @@
         "isRequired": false,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10119,7 +10635,7 @@
         "isRequired": false,
         "duration": "0m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10230,7 +10746,7 @@
         "isRequired": false,
         "duration": "1m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10343,7 +10859,7 @@
         "isRequired": true,
         "duration": "0m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10456,7 +10972,7 @@
         "isRequired": true,
         "duration": "0m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10569,7 +11085,7 @@
         "isRequired": true,
         "duration": "0m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10682,7 +11198,7 @@
         "isRequired": true,
         "duration": "0m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10795,7 +11311,7 @@
         "isRequired": true,
         "duration": "0m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -10908,7 +11424,7 @@
         "isRequired": true,
         "duration": "1m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11021,7 +11537,7 @@
         "isRequired": true,
         "duration": "0m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11132,7 +11648,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11245,7 +11761,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11358,7 +11874,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11469,7 +11985,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11580,7 +12096,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11691,7 +12207,7 @@
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11802,7 +12318,7 @@
         "isRequired": false,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -11913,7 +12429,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12026,7 +12542,7 @@
         "isRequired": false,
         "duration": "1m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12137,7 +12653,7 @@
         "isRequired": false,
         "duration": "1m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12248,7 +12764,7 @@
         "isRequired": false,
         "duration": "1m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12359,7 +12875,7 @@
         "isRequired": false,
         "duration": "6m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12470,7 +12986,7 @@
         "isRequired": false,
         "duration": "0m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12581,7 +13097,7 @@
         "isRequired": false,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12694,7 +13210,7 @@
         "isRequired": false,
         "duration": "1m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12805,7 +13321,7 @@
         "isRequired": false,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -12916,7 +13432,7 @@
         "isRequired": false,
         "duration": "1m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13027,7 +13543,7 @@
         "isRequired": false,
         "duration": "0m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13138,7 +13654,7 @@
         "isRequired": false,
         "duration": "1m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13249,7 +13765,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13360,7 +13876,7 @@
         "isRequired": false,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13471,7 +13987,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13584,7 +14100,7 @@
         "isRequired": false,
         "duration": "1m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13695,7 +14211,7 @@
         "isRequired": false,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13806,7 +14322,7 @@
         "isRequired": false,
         "duration": "1m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -13917,7 +14433,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14028,7 +14544,7 @@
         "isRequired": false,
         "duration": "0m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14139,7 +14655,7 @@
         "isRequired": false,
         "duration": "0m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14250,7 +14766,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14363,7 +14879,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14476,7 +14992,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14587,7 +15103,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14698,7 +15214,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14809,7 +15325,7 @@
         "isRequired": false,
         "duration": "1m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -14920,7 +15436,7 @@
         "isRequired": false,
         "duration": "2m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -15031,7 +15547,7 @@
         "isRequired": false,
         "duration": "2m 5s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -15142,7 +15658,7 @@
         "isRequired": false,
         "duration": "1m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -15364,7 +15880,7 @@
         "isRequired": false,
         "duration": "2m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -15475,7 +15991,7 @@
         "isRequired": false,
         "duration": "3m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -15586,7 +16102,7 @@
         "isRequired": false,
         "duration": "0m 33s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -15808,7 +16324,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -15921,7 +16437,7 @@
         "isRequired": false,
         "duration": "1m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16035,7 +16551,7 @@
         "isRequired": false,
         "duration": "1m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16148,7 +16664,7 @@
         "isRequired": false,
         "duration": "1m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16261,7 +16777,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16374,7 +16890,7 @@
         "isRequired": false,
         "duration": "1m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16487,7 +17003,7 @@
         "isRequired": false,
         "duration": "1m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16600,7 +17116,7 @@
         "isRequired": false,
         "duration": "1m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16713,7 +17229,7 @@
         "isRequired": false,
         "duration": "2m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16826,7 +17342,7 @@
         "isRequired": false,
         "duration": "2m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -16939,7 +17455,7 @@
         "isRequired": false,
         "duration": "1m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17052,7 +17568,7 @@
         "isRequired": false,
         "duration": "2m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17165,7 +17681,7 @@
         "isRequired": false,
         "duration": "1m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17278,7 +17794,7 @@
         "isRequired": false,
         "duration": "0m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17391,7 +17907,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17505,7 +18021,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17618,7 +18134,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17731,7 +18247,7 @@
         "isRequired": true,
         "duration": "8m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -17842,7 +18358,7 @@
         "isRequired": false,
         "duration": "5m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18064,7 +18580,7 @@
         "isRequired": false,
         "duration": "8m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18177,7 +18693,7 @@
         "isRequired": false,
         "duration": "8m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18401,7 +18917,7 @@
         "isRequired": true,
         "duration": "4m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18514,7 +19030,7 @@
         "isRequired": true,
         "duration": "3m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18627,7 +19143,7 @@
         "isRequired": true,
         "duration": "4m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18740,7 +19256,7 @@
         "isRequired": true,
         "duration": "3m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18853,7 +19369,7 @@
         "isRequired": true,
         "duration": "3m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -18966,7 +19482,7 @@
         "isRequired": true,
         "duration": "3m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19079,7 +19595,7 @@
         "isRequired": true,
         "duration": "4m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19192,7 +19708,7 @@
         "isRequired": true,
         "duration": "3m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19305,7 +19821,7 @@
         "isRequired": true,
         "duration": "3m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19418,7 +19934,7 @@
         "isRequired": true,
         "duration": "5m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19529,7 +20045,7 @@
         "isRequired": false,
         "duration": "1m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19642,7 +20158,7 @@
         "isRequired": true,
         "duration": "5m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19753,7 +20269,7 @@
         "isRequired": false,
         "duration": "1m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19866,7 +20382,7 @@
         "isRequired": true,
         "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -19979,7 +20495,7 @@
         "isRequired": true,
         "duration": "2m 19s",
         "lastFailure": "4/14/2026",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20092,7 +20608,7 @@
         "isRequired": true,
         "duration": "1m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20205,7 +20721,7 @@
         "isRequired": true,
         "duration": "2m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20318,7 +20834,7 @@
         "isRequired": true,
         "duration": "2m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20431,7 +20947,7 @@
         "isRequired": true,
         "duration": "1m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20544,7 +21060,7 @@
         "isRequired": true,
         "duration": "1m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20655,7 +21171,7 @@
         "isRequired": false,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20768,7 +21284,7 @@
         "isRequired": true,
         "duration": "1m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20881,7 +21397,7 @@
         "isRequired": true,
         "duration": "2m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -20994,7 +21510,7 @@
         "isRequired": true,
         "duration": "1m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -21105,7 +21621,7 @@
         "isRequired": false,
         "duration": "2m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -21553,7 +22069,7 @@
         "isRequired": false,
         "duration": "3m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -21666,7 +22182,7 @@
         "isRequired": false,
         "duration": "3m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -21779,7 +22295,7 @@
         "isRequired": false,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -21892,7 +22408,7 @@
         "isRequired": true,
         "duration": "5m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22005,7 +22521,7 @@
         "isRequired": true,
         "duration": "4m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22118,7 +22634,7 @@
         "isRequired": true,
         "duration": "5m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22231,7 +22747,7 @@
         "isRequired": true,
         "duration": "5m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22344,7 +22860,7 @@
         "isRequired": true,
         "duration": "4m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22457,7 +22973,7 @@
         "isRequired": true,
         "duration": "5m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22570,7 +23086,7 @@
         "isRequired": true,
         "duration": "4m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22683,7 +23199,7 @@
         "isRequired": true,
         "duration": "4m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22796,7 +23312,7 @@
         "isRequired": true,
         "duration": "5m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -22909,7 +23425,7 @@
         "isRequired": true,
         "duration": "4m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -23023,7 +23539,7 @@
         "isRequired": true,
         "duration": "2m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -23136,7 +23652,7 @@
         "isRequired": false,
         "duration": "2m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -23469,7 +23985,7 @@
         "isRequired": false,
         "duration": "3m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -23582,7 +24098,7 @@
         "isRequired": true,
         "duration": "19m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -23688,14 +24204,14 @@
         "name": "run-k8s-tests (cbl-mariner, clh, small, containerd)",
         "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
         "fullName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
-        "status": "running",
+        "status": "passed",
         "categories": [
           "required"
         ],
         "isRequired": true,
-        "duration": "N/A",
+        "duration": "50m 41s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -23780,11 +24296,11 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
             "runId": "24753582597",
             "jobId": "72423177311",
-            "duration": "N/A",
+            "duration": "50m 41s",
             "failureStep": null
           }
         ],
@@ -23801,14 +24317,14 @@
         "name": "run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
         "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
         "fullName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-        "status": "running",
+        "status": "passed",
         "categories": [
           "required"
         ],
         "isRequired": true,
-        "duration": "N/A",
+        "duration": "52m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -23893,11 +24409,11 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
             "runId": "24753582597",
             "jobId": "72423177255",
-            "duration": "N/A",
+            "duration": "52m 26s",
             "failureStep": null
           }
         ],
@@ -24145,7 +24661,7 @@
         "isRequired": true,
         "duration": "17m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -24258,7 +24774,7 @@
         "isRequired": true,
         "duration": "19m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -24371,7 +24887,7 @@
         "isRequired": true,
         "duration": "20m 18s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -24484,7 +25000,7 @@
         "isRequired": true,
         "duration": "20m 13s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -24597,7 +25113,7 @@
         "isRequired": true,
         "duration": "21m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -24710,7 +25226,7 @@
         "isRequired": true,
         "duration": "22m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -24823,7 +25339,7 @@
         "isRequired": true,
         "duration": "15m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -24936,7 +25452,7 @@
         "isRequired": true,
         "duration": "17m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -25049,7 +25565,7 @@
         "isRequired": true,
         "duration": "19m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -25162,7 +25678,7 @@
         "isRequired": true,
         "duration": "19m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -25276,7 +25792,7 @@
         "isRequired": false,
         "duration": "26m 40s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -25462,7 +25978,7 @@
         "isRequired": true,
         "duration": "13m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -25687,7 +26203,7 @@
         "isRequired": false,
         "duration": "18m 33s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -25802,7 +26318,7 @@
         "isRequired": true,
         "duration": "19m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -25917,7 +26433,7 @@
         "isRequired": true,
         "duration": "30m 27s",
         "lastFailure": "4/15/2026",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -26091,7 +26607,7 @@
         "isRequired": false,
         "duration": "18m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -26197,14 +26713,14 @@
         "name": "run-k8s-tests-coco-nontee (qemu-coco-dev, experimental-force-guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, experimental-force-guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, experimental-force-guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "49m 49s",
         "lastFailure": "4/15/2026",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -26351,10 +26867,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177263",
-            "duration": "N/A",
+            "duration": "49m 49s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -26416,15 +26932,15 @@
         "name": "run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "required"
         ],
         "isRequired": true,
-        "duration": "N/A",
+        "duration": "52m 30s",
         "lastFailure": "4/15/2026",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -26571,10 +27087,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177265",
-            "duration": "N/A",
+            "duration": "52m 30s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -26637,15 +27153,15 @@
         "name": "run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "required"
         ],
         "isRequired": true,
-        "duration": "N/A",
+        "duration": "44m 28s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "2 days ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -26816,10 +27332,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177284",
-            "duration": "N/A",
+            "duration": "44m 28s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -26892,15 +27408,15 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, experimental-force-guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, experimental-force-guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, experimental-force-guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "57m 4s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -27058,10 +27574,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177400",
-            "duration": "N/A",
+            "duration": "57m 4s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -27123,14 +27639,14 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "Yesterday",
+        "duration": "52m 38s",
+        "lastFailure": "4h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -27565,20 +28081,57 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "24753582597",
             "jobId": "72423177402",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "52m 38s",
+            "failureStep": "k8s-liveness-probes.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "##[group]k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                }
+              ],
+              "stats": {
+                "total": 270,
+                "passed": 266,
+                "failed": 4,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-liveness-probes.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 9,
+        "failureCount": 10,
         "failedTestsInWeather": [
           {
             "name": "Liveness http probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -27595,8 +28148,9 @@
           },
           {
             "name": "Liveness tcp probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -27636,7 +28190,46 @@
         "setupRetry": false,
         "runId": "24753582597",
         "jobId": "72423177402",
-        "error": null,
+        "error": {
+          "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+          "batsFiles": [
+            "k8s-liveness-probes.bats",
+            "##[group]k8s-liveness-probes.bats"
+          ],
+          "testResults": {
+            "total": 270,
+            "passed": 266,
+            "failed": 4,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "##[group]k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            }
+          ],
+          "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+        },
         "maintainers": [
           "@stevenhorsman",
           "@wainersm"
@@ -27647,14 +28240,14 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k0s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "Yesterday",
+        "duration": "46m 31s",
+        "lastFailure": "4h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -28089,20 +28682,57 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "24753582597",
             "jobId": "72423177395",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "46m 31s",
+            "failureStep": "k8s-liveness-probes.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "##[group]k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                }
+              ],
+              "stats": {
+                "total": 270,
+                "passed": 266,
+                "failed": 4,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-liveness-probes.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 9,
+        "failureCount": 10,
         "failedTestsInWeather": [
           {
             "name": "Liveness http probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -28119,8 +28749,9 @@
           },
           {
             "name": "Liveness tcp probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -28160,7 +28791,46 @@
         "setupRetry": false,
         "runId": "24753582597",
         "jobId": "72423177395",
-        "error": null,
+        "error": {
+          "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+          "batsFiles": [
+            "k8s-liveness-probes.bats",
+            "##[group]k8s-liveness-probes.bats"
+          ],
+          "testResults": {
+            "total": 270,
+            "passed": 266,
+            "failed": 4,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "##[group]k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            }
+          ],
+          "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+        },
         "maintainers": [
           "@pmores",
           "@lifupan"
@@ -28171,15 +28841,15 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, experimental-force-guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, experimental-force-guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, experimental-force-guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "56m 33s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -28324,10 +28994,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177393",
-            "duration": "N/A",
+            "duration": "56m 33s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -28379,15 +29049,15 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "54m 27s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -28532,10 +29202,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177401",
-            "duration": "N/A",
+            "duration": "54m 27s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -28588,14 +29258,14 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (k3s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "Yesterday",
+        "duration": "53m 27s",
+        "lastFailure": "4h ago",
         "lastSuccess": "2 days ago",
         "weatherHistory": [
           {
@@ -28741,16 +29411,51 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "24753582597",
             "jobId": "72423177414",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "53m 27s",
+            "failureStep": "k8s-cron-job.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 1,
+                  "name": "Run a cron job to completion",
+                  "comment": "",
+                  "file": "k8s-cron-job.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Run a cron job to completion",
+                  "comment": "",
+                  "file": "##[group]k8s-cron-job.bats"
+                }
+              ],
+              "stats": {
+                "total": 270,
+                "passed": 268,
+                "failed": 2,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-cron-job.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 2,
+        "failureCount": 3,
         "failedTestsInWeather": [
+          {
+            "name": "Run a cron job to completion",
+            "count": 2,
+            "dates": [
+              "2026-04-22",
+              "2026-04-21"
+            ],
+            "files": [
+              "k8s-cron-job.bats"
+            ]
+          },
           {
             "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
             "count": 1,
@@ -28770,23 +29475,40 @@
             "files": [
               "k8s-guest-pull-image-signature.bats"
             ]
-          },
-          {
-            "name": "Run a cron job to completion",
-            "count": 1,
-            "dates": [
-              "2026-04-21"
-            ],
-            "files": [
-              "k8s-cron-job.bats"
-            ]
           }
         ],
         "retried": 0,
         "setupRetry": false,
         "runId": "24753582597",
         "jobId": "72423177414",
-        "error": null,
+        "error": {
+          "step": "k8s-cron-job.bats, ##[group]k8s-cron-job.bats",
+          "batsFiles": [
+            "k8s-cron-job.bats",
+            "##[group]k8s-cron-job.bats"
+          ],
+          "testResults": {
+            "total": 270,
+            "passed": 268,
+            "failed": 2,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 1,
+              "name": "Run a cron job to completion",
+              "comment": "",
+              "file": "k8s-cron-job.bats"
+            },
+            {
+              "number": 1,
+              "name": "Run a cron job to completion",
+              "comment": "",
+              "file": "##[group]k8s-cron-job.bats"
+            }
+          ],
+          "output": "not ok 1 - Run a cron job to completion\nnot ok 1 - Run a cron job to completion"
+        },
         "maintainers": [
           "@pmores",
           "@lifupan"
@@ -28797,15 +29519,15 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, experimental-force-guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, experimental-force-guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, experimental-force-guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "54m 11s",
         "lastFailure": "4/15/2026",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -28926,10 +29648,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177415",
-            "duration": "N/A",
+            "duration": "54m 11s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -28971,14 +29693,14 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "Yesterday",
+        "duration": "58m 18s",
+        "lastFailure": "4h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -29623,20 +30345,57 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "24753582597",
             "jobId": "72423177409",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "58m 18s",
+            "failureStep": "k8s-liveness-probes.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "##[group]k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                }
+              ],
+              "stats": {
+                "total": 270,
+                "passed": 266,
+                "failed": 4,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-liveness-probes.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 9,
+        "failureCount": 10,
         "failedTestsInWeather": [
           {
             "name": "Liveness http probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -29653,8 +30412,9 @@
           },
           {
             "name": "Liveness tcp probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -29837,7 +30597,46 @@
         "setupRetry": false,
         "runId": "24753582597",
         "jobId": "72423177409",
-        "error": null,
+        "error": {
+          "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+          "batsFiles": [
+            "k8s-liveness-probes.bats",
+            "##[group]k8s-liveness-probes.bats"
+          ],
+          "testResults": {
+            "total": 270,
+            "passed": 266,
+            "failed": 4,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "##[group]k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            }
+          ],
+          "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+        },
         "maintainers": [
           "@stevenhorsman",
           "@wainersm"
@@ -29848,14 +30647,14 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (microk8s, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "Yesterday",
+        "duration": "46m 14s",
+        "lastFailure": "4h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -30290,20 +31089,57 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "24753582597",
             "jobId": "72423177416",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "46m 14s",
+            "failureStep": "k8s-liveness-probes.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Liveness http probe",
+                  "comment": "",
+                  "file": "##[group]k8s-liveness-probes.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Liveness tcp probe",
+                  "comment": "",
+                  "file": "k8s-liveness-probes.bats"
+                }
+              ],
+              "stats": {
+                "total": 270,
+                "passed": 266,
+                "failed": 4,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-liveness-probes.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 9,
+        "failureCount": 10,
         "failedTestsInWeather": [
           {
             "name": "Liveness http probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -30320,8 +31156,9 @@
           },
           {
             "name": "Liveness tcp probe",
-            "count": 9,
+            "count": 10,
             "dates": [
+              "2026-04-22",
               "2026-04-21",
               "2026-04-20",
               "2026-04-19",
@@ -30361,7 +31198,46 @@
         "setupRetry": false,
         "runId": "24753582597",
         "jobId": "72423177416",
-        "error": null,
+        "error": {
+          "step": "k8s-liveness-probes.bats, ##[group]k8s-liveness-probes.bats",
+          "batsFiles": [
+            "k8s-liveness-probes.bats",
+            "##[group]k8s-liveness-probes.bats"
+          ],
+          "testResults": {
+            "total": 270,
+            "passed": 266,
+            "failed": 4,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            },
+            {
+              "number": 2,
+              "name": "Liveness http probe",
+              "comment": "",
+              "file": "##[group]k8s-liveness-probes.bats"
+            },
+            {
+              "number": 3,
+              "name": "Liveness tcp probe",
+              "comment": "",
+              "file": "k8s-liveness-probes.bats"
+            }
+          ],
+          "output": "not ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe\nnot ok 2 - Liveness http probe\nnot ok 3 - Liveness tcp probe"
+        },
         "maintainers": [
           "@pmores",
           "@lifupan"
@@ -30372,15 +31248,15 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, experimental-force-guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, experimental-force-guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, experimental-force-guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "53m 5s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -30501,10 +31377,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177419",
-            "duration": "N/A",
+            "duration": "53m 5s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -30546,15 +31422,15 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "54m 32s",
         "lastFailure": "4/15/2026",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -30675,10 +31551,10 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "24753582597",
             "jobId": "72423177417",
-            "duration": "N/A",
+            "duration": "54m 32s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -30721,14 +31597,14 @@
         "name": "run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-extensive-matrix (rke2, qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee",
           "autogen_policy"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "4/15/2026",
+        "duration": "51m 39s",
+        "lastFailure": "4h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -30874,15 +31750,51 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "24753582597",
             "jobId": "72423177421",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "51m 39s",
+            "failureStep": "k8s-guest-pull-image-authenticated.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 5,
+                  "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 6,
+                  "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 5,
+                  "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                  "comment": "",
+                  "file": "##[group]k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 6,
+                  "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                }
+              ],
+              "stats": {
+                "total": 270,
+                "passed": 266,
+                "failed": 4,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-guest-pull-image-authenticated.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 2,
+        "failureCount": 3,
         "failedTestsInWeather": [
           {
             "name": "Test OOM events for pods",
@@ -30913,13 +31825,72 @@
             "files": [
               "k8s-guest-pull-image-signature.bats"
             ]
+          },
+          {
+            "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+            "count": 1,
+            "dates": [
+              "2026-04-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-authenticated.bats"
+            ]
+          },
+          {
+            "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+            "count": 1,
+            "dates": [
+              "2026-04-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-authenticated.bats"
+            ]
           }
         ],
         "retried": 0,
         "setupRetry": false,
         "runId": "24753582597",
         "jobId": "72423177421",
-        "error": null,
+        "error": {
+          "step": "k8s-guest-pull-image-authenticated.bats, ##[group]k8s-guest-pull-image-authenticated.bats",
+          "batsFiles": [
+            "k8s-guest-pull-image-authenticated.bats",
+            "##[group]k8s-guest-pull-image-authenticated.bats"
+          ],
+          "testResults": {
+            "total": 270,
+            "passed": 266,
+            "failed": 4,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 5,
+              "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-authenticated.bats"
+            },
+            {
+              "number": 6,
+              "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-authenticated.bats"
+            },
+            {
+              "number": 5,
+              "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+              "comment": "",
+              "file": "##[group]k8s-guest-pull-image-authenticated.bats"
+            },
+            {
+              "number": 6,
+              "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-authenticated.bats"
+            }
+          ],
+          "output": "not ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 6 - Test that creating a container from an authenticated image, with no credentials fails (with initdata)\nnot ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 6 - Test that creating a container from an authenticated image, with no credentials fails (with initdata)"
+        },
         "maintainers": [
           "@pmores",
           "@lifupan"
@@ -31054,7 +32025,7 @@
         "isRequired": false,
         "duration": "24m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -31160,14 +32131,14 @@
         "name": "run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee",
           "required"
         ],
         "isRequired": true,
-        "duration": "N/A",
-        "lastFailure": "2 days ago",
+        "duration": "64m 40s",
+        "lastFailure": "4h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -31313,15 +32284,39 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "24753582597",
             "jobId": "72423177276",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "64m 40s",
+            "failureStep": "k8s-measured-rootfs.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 1,
+                  "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+                  "comment": "",
+                  "file": "k8s-measured-rootfs.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+                  "comment": "",
+                  "file": "##[group]k8s-measured-rootfs.bats"
+                }
+              ],
+              "stats": {
+                "total": 270,
+                "passed": 268,
+                "failed": 2,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-measured-rootfs.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 4,
+        "failureCount": 5,
         "failedTestsInWeather": [
           {
             "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
@@ -31342,13 +32337,50 @@
             "files": [
               "k8s-guest-pull-image-signature.bats"
             ]
+          },
+          {
+            "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+            "count": 1,
+            "dates": [
+              "2026-04-22"
+            ],
+            "files": [
+              "k8s-measured-rootfs.bats"
+            ]
           }
         ],
         "retried": 0,
         "setupRetry": false,
         "runId": "24753582597",
         "jobId": "72423177276",
-        "error": null,
+        "error": {
+          "step": "k8s-measured-rootfs.bats, ##[group]k8s-measured-rootfs.bats",
+          "batsFiles": [
+            "k8s-measured-rootfs.bats",
+            "##[group]k8s-measured-rootfs.bats"
+          ],
+          "testResults": {
+            "total": 270,
+            "passed": 268,
+            "failed": 2,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 1,
+              "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+              "comment": "",
+              "file": "k8s-measured-rootfs.bats"
+            },
+            {
+              "number": 1,
+              "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+              "comment": "",
+              "file": "##[group]k8s-measured-rootfs.bats"
+            }
+          ],
+          "output": "not ok 1 - Test cannot launch pod with measured boot enabled and incorrect hash\nnot ok 1 - Test cannot launch pod with measured boot enabled and incorrect hash"
+        },
         "maintainers": [
           "@AdithyaKrishnan",
           "@hgowda-amd"
@@ -31359,14 +32391,14 @@
         "name": "run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-        "status": "running",
+        "status": "passed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "53m 31s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -31451,11 +32483,11 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
             "runId": "24753582597",
             "jobId": "72423177287",
-            "duration": "N/A",
+            "duration": "53m 31s",
             "failureStep": null
           }
         ],
@@ -31478,7 +32510,7 @@
         ],
         "isRequired": false,
         "duration": "35m 46s",
-        "lastFailure": "Just now",
+        "lastFailure": "4h ago",
         "lastSuccess": "4/14/2026",
         "weatherHistory": [
           {
@@ -31623,14 +32655,14 @@
         "name": "run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
-        "status": "running",
+        "status": "passed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "43m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -31715,11 +32747,11 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
             "runId": "24753582597",
             "jobId": "72423363847",
-            "duration": "N/A",
+            "duration": "43m 51s",
             "failureStep": null
           }
         ],
@@ -31743,7 +32775,7 @@
         "isRequired": true,
         "duration": "11m 22s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -31854,7 +32886,7 @@
         "isRequired": false,
         "duration": "10m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -31967,7 +32999,7 @@
         "isRequired": true,
         "duration": "8m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32080,7 +33112,7 @@
         "isRequired": true,
         "duration": "11m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32193,7 +33225,7 @@
         "isRequired": true,
         "duration": "1m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32311,7 +33343,7 @@
         "status": "passed",
         "duration": "6m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32410,7 +33442,7 @@
         "status": "passed",
         "duration": "6m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32509,7 +33541,7 @@
         "status": "passed",
         "duration": "7m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32608,7 +33640,7 @@
         "status": "passed",
         "duration": "7m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32707,7 +33739,7 @@
         "status": "passed",
         "duration": "7m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32806,7 +33838,7 @@
         "status": "passed",
         "duration": "7m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -32905,7 +33937,7 @@
         "status": "passed",
         "duration": "7m 17s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33004,7 +34036,7 @@
         "status": "passed",
         "duration": "7m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33103,7 +34135,7 @@
         "status": "passed",
         "duration": "7m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33202,7 +34234,7 @@
         "status": "passed",
         "duration": "3m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33301,7 +34333,7 @@
         "status": "passed",
         "duration": "7m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33400,7 +34432,7 @@
         "status": "passed",
         "duration": "4m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33499,7 +34531,7 @@
         "status": "passed",
         "duration": "8m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33598,7 +34630,7 @@
         "status": "passed",
         "duration": "4m 14s",
         "lastFailure": "4/14/2026",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33697,7 +34729,7 @@
         "status": "passed",
         "duration": "7m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33796,7 +34828,7 @@
         "status": "passed",
         "duration": "4m 10s",
         "lastFailure": "4/14/2026",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33895,7 +34927,7 @@
         "status": "passed",
         "duration": "7m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -33994,7 +35026,7 @@
         "status": "passed",
         "duration": "7m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34093,7 +35125,7 @@
         "status": "passed",
         "duration": "3m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34192,7 +35224,7 @@
         "status": "passed",
         "duration": "6m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34291,7 +35323,7 @@
         "status": "passed",
         "duration": "3m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34390,7 +35422,7 @@
         "status": "passed",
         "duration": "7m 2s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34489,7 +35521,7 @@
         "status": "passed",
         "duration": "7m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34588,7 +35620,7 @@
         "status": "passed",
         "duration": "6m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34687,7 +35719,7 @@
         "status": "passed",
         "duration": "7m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34786,7 +35818,7 @@
         "status": "passed",
         "duration": "10m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34885,7 +35917,7 @@
         "status": "passed",
         "duration": "7m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -34984,7 +36016,7 @@
         "status": "passed",
         "duration": "7m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -35083,7 +36115,7 @@
         "status": "passed",
         "duration": "5m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -35182,7 +36214,7 @@
         "status": "passed",
         "duration": "5m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -35281,7 +36313,7 @@
         "status": "passed",
         "duration": "4m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -35379,7 +36411,7 @@
         "fullName": "E2E (\n  standard /\n  k3s /\n  experimental-force-guest-pull\n   /\n  qemu-coco-dev /\n  x86_64\n)",
         "status": "failed",
         "duration": "31m 33s",
-        "lastFailure": "1h ago",
+        "lastFailure": "4h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -35481,7 +36513,7 @@
         "fullName": "E2E (\n  standard /\n  k3s /\n  nydus\n   /\n  qemu-coco-dev /\n  x86_64\n)",
         "status": "failed",
         "duration": "31m 37s",
-        "lastFailure": "1h ago",
+        "lastFailure": "4h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -35583,7 +36615,7 @@
         "fullName": "E2E (\n  standard /\n  k3s /\n  nydus\n   /\n  qemu-coco-dev-runtime-rs /\n  x86_64\n)",
         "status": "failed",
         "duration": "31m 29s",
-        "lastFailure": "1h ago",
+        "lastFailure": "4h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -35686,7 +36718,7 @@
         "status": "passed",
         "duration": "6m 52s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -35785,7 +36817,7 @@
         "status": "passed",
         "duration": "4m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -35884,7 +36916,7 @@
         "status": "passed",
         "duration": "5m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -35983,7 +37015,7 @@
         "status": "passed",
         "duration": "3m 22s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36082,7 +37114,7 @@
         "status": "passed",
         "duration": "4m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36181,7 +37213,7 @@
         "status": "passed",
         "duration": "3m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36280,7 +37312,7 @@
         "status": "passed",
         "duration": "5m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36379,7 +37411,7 @@
         "status": "passed",
         "duration": "3m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36478,7 +37510,7 @@
         "status": "passed",
         "duration": "6m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36577,7 +37609,7 @@
         "status": "passed",
         "duration": "3m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36676,7 +37708,7 @@
         "status": "passed",
         "duration": "4m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36775,7 +37807,7 @@
         "status": "passed",
         "duration": "3m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36874,7 +37906,7 @@
         "status": "passed",
         "duration": "4m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -36973,7 +38005,7 @@
         "status": "passed",
         "duration": "4m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37072,7 +38104,7 @@
         "status": "passed",
         "duration": "3m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37171,7 +38203,7 @@
         "status": "passed",
         "duration": "4m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37270,7 +38302,7 @@
         "status": "passed",
         "duration": "5m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37369,7 +38401,7 @@
         "status": "passed",
         "duration": "4m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37468,7 +38500,7 @@
         "status": "passed",
         "duration": "4m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37567,7 +38599,7 @@
         "status": "passed",
         "duration": "8m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37666,7 +38698,7 @@
         "status": "passed",
         "duration": "7m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37765,7 +38797,7 @@
         "status": "passed",
         "duration": "6m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -37971,7 +39003,7 @@
         "fullName": "e2e / E2E tests on libvirt for the amd64 architecture / Libvirt e2e tests: (ubuntu-24.04, containerd) on mkosi",
         "status": "passed",
         "duration": "29m 27s",
-        "lastFailure": "4 days ago",
+        "lastFailure": "5 days ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -38367,7 +39399,7 @@
         "fullName": "e2e / aws (crio, ubuntu, generic, amd64) / AWS e2e tests: (onprem, crio)",
         "status": "failed",
         "duration": "110m 25s",
-        "lastFailure": "20h ago",
+        "lastFailure": "23h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -38586,7 +39618,7 @@
         "status": "passed",
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -38683,9 +39715,9 @@
         "jobName": "e2e / caa_image_amd64 / build and push (dev, linux/amd64)",
         "fullName": "e2e / caa_image_amd64 / build and push (dev, linux/amd64)",
         "status": "passed",
-        "duration": "5m 3s",
+        "duration": "4m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -38761,17 +39793,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445697704",
+            "duration": "4m 25s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012095",
+        "runId": "24761371116",
+        "jobId": "72445697704",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38782,9 +39814,9 @@
         "jobName": "e2e / caa_image_amd64 / build and push (release, linux/amd64)",
         "fullName": "e2e / caa_image_amd64 / build and push (release, linux/amd64)",
         "status": "passed",
-        "duration": "3m 46s",
+        "duration": "3m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -38860,17 +39892,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445697694",
+            "duration": "3m 31s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012086",
+        "runId": "24761371116",
+        "jobId": "72445697694",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38881,9 +39913,9 @@
         "jobName": "e2e / caa_image_s390x / build and push (dev, linux/s390x)",
         "fullName": "e2e / caa_image_s390x / build and push (dev, linux/s390x)",
         "status": "passed",
-        "duration": "7m 4s",
+        "duration": "6m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -38959,17 +39991,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445697712",
+            "duration": "6m 27s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012071",
+        "runId": "24761371116",
+        "jobId": "72445697712",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38980,9 +40012,9 @@
         "jobName": "e2e / caa_image_s390x / build and push (release, linux/s390x)",
         "fullName": "e2e / caa_image_s390x / build and push (release, linux/s390x)",
         "status": "passed",
-        "duration": "5m 6s",
+        "duration": "5m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -39058,17 +40090,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445697714",
+            "duration": "5m 4s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012081",
+        "runId": "24761371116",
+        "jobId": "72445697714",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39277,9 +40309,9 @@
         "jobName": "e2e / image / build and push (dev, linux/amd64)",
         "fullName": "e2e / image / build and push (dev, linux/amd64)",
         "status": "passed",
-        "duration": "4m 46s",
+        "duration": "4m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -39355,17 +40387,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445697715",
+            "duration": "4m 35s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012087",
+        "runId": "24761371116",
+        "jobId": "72445697715",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39375,10 +40407,10 @@
         "name": "e2e / image / build and push (release, linux/amd64,linux/s390x,linux/ppc64le)",
         "jobName": "e2e / image / build and push (release, linux/amd64,linux/s390x,linux/ppc64le)",
         "fullName": "e2e / image / build and push (release, linux/amd64,linux/s390x,linux/ppc64le)",
-        "status": "passed",
-        "duration": "9m 7s",
+        "status": "running",
+        "duration": "N/A",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -39455,16 +40487,16 @@
           {
             "date": "2026-04-22T00:00:00.000Z",
             "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "24761371116",
+            "jobId": "72445697709",
+            "duration": "N/A",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012092",
+        "runId": "24761371116",
+        "jobId": "72445697709",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39475,9 +40507,9 @@
         "jobName": "e2e / libvirt_e2e_arch_prep",
         "fullName": "e2e / libvirt_e2e_arch_prep",
         "status": "passed",
-        "duration": "0m 7s",
+        "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -39553,17 +40585,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445697640",
+            "duration": "0m 4s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012034",
+        "runId": "24761371116",
+        "jobId": "72445697640",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39672,10 +40704,10 @@
         "name": "e2e / podvm / Create pod vm image (ubuntu, amd64, generic)",
         "jobName": "e2e / podvm / Create pod vm image (ubuntu, amd64, generic)",
         "fullName": "e2e / podvm / Create pod vm image (ubuntu, amd64, generic)",
-        "status": "passed",
-        "duration": "10m 56s",
+        "status": "running",
+        "duration": "N/A",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -39752,16 +40784,16 @@
           {
             "date": "2026-04-22T00:00:00.000Z",
             "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "24761371116",
+            "jobId": "72446155444",
+            "duration": "N/A",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257469073",
+        "runId": "24761371116",
+        "jobId": "72446155444",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39771,10 +40803,10 @@
         "name": "e2e / podvm / Create pod vm image (ubuntu, arm64, generic)",
         "jobName": "e2e / podvm / Create pod vm image (ubuntu, arm64, generic)",
         "fullName": "e2e / podvm / Create pod vm image (ubuntu, arm64, generic)",
-        "status": "passed",
-        "duration": "9m 59s",
+        "status": "running",
+        "duration": "N/A",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -39851,16 +40883,16 @@
           {
             "date": "2026-04-22T00:00:00.000Z",
             "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "24761371116",
+            "jobId": "72446155496",
+            "duration": "N/A",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257469080",
+        "runId": "24761371116",
+        "jobId": "72446155496",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39870,10 +40902,10 @@
         "name": "e2e / podvm / Create pod vm image (ubuntu, s390x, generic)",
         "jobName": "e2e / podvm / Create pod vm image (ubuntu, s390x, generic)",
         "fullName": "e2e / podvm / Create pod vm image (ubuntu, s390x, generic)",
-        "status": "passed",
-        "duration": "9m 46s",
-        "lastFailure": "Yesterday",
-        "lastSuccess": "20h ago",
+        "status": "running",
+        "duration": "N/A",
+        "lastFailure": "2 days ago",
+        "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -39950,16 +40982,16 @@
           {
             "date": "2026-04-22T00:00:00.000Z",
             "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "24761371116",
+            "jobId": "72446155437",
+            "duration": "N/A",
             "failureStep": null
           }
         ],
         "failureCount": 2,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257469076",
+        "runId": "24761371116",
+        "jobId": "72446155437",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -40069,9 +41101,9 @@
         "jobName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, amd64)",
         "fullName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, amd64)",
         "status": "passed",
-        "duration": "1m 57s",
+        "duration": "2m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -40147,17 +41179,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445949070",
+            "duration": "2m 16s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257246664",
+        "runId": "24761371116",
+        "jobId": "72445949070",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -40168,9 +41200,9 @@
         "jobName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, arm64)",
         "fullName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, arm64)",
         "status": "passed",
-        "duration": "2m 26s",
+        "duration": "2m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -40246,17 +41278,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445949055",
+            "duration": "2m 5s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257246645",
+        "runId": "24761371116",
+        "jobId": "72445949055",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -40267,9 +41299,9 @@
         "jobName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, s390x)",
         "fullName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, s390x)",
         "status": "passed",
-        "duration": "2m 3s",
+        "duration": "2m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -40345,17 +41377,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445949080",
+            "duration": "2m 1s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257246648",
+        "runId": "24761371116",
+        "jobId": "72445949080",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -40366,9 +41398,9 @@
         "jobName": "e2e / podvm_builder / Create pod vm builder image (ubuntu, ubuntu-24.04)",
         "fullName": "e2e / podvm_builder / Create pod vm builder image (ubuntu, ubuntu-24.04)",
         "status": "passed",
-        "duration": "2m 41s",
-        "lastFailure": "4 days ago",
-        "lastSuccess": "20h ago",
+        "duration": "2m 55s",
+        "lastFailure": "5 days ago",
+        "lastSuccess": "Just now",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -40444,17 +41476,17 @@
           },
           {
             "date": "2026-04-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "24761371116",
+            "jobId": "72445697724",
+            "duration": "2m 55s",
             "failureStep": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012084",
+        "runId": "24761371116",
+        "jobId": "72445697724",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -40464,10 +41496,10 @@
         "name": "e2e / podvm_mkosi_amd64 / Build mkosi image for amd64",
         "jobName": "e2e / podvm_mkosi_amd64 / Build mkosi image for amd64",
         "fullName": "e2e / podvm_mkosi_amd64 / Build mkosi image for amd64",
-        "status": "failed",
-        "duration": "8m 13s",
-        "lastFailure": "20h ago",
-        "lastSuccess": "Yesterday",
+        "status": "running",
+        "duration": "N/A",
+        "lastFailure": "Yesterday",
+        "lastSuccess": "2 days ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -40544,32 +41576,29 @@
           {
             "date": "2026-04-22T00:00:00.000Z",
             "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "24761371116",
+            "jobId": "72445697702",
+            "duration": "N/A",
             "failureStep": null
           }
         ],
         "failureCount": 1,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012088",
+        "runId": "24761371116",
+        "jobId": "72445697702",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
-        "error": {
-          "step": "Build and push image for docker provider",
-          "output": "View full log on GitHub for details"
-        }
+        "error": null
       },
       {
         "id": "e2e---podvm-mkosi-s390x---build-mkosi-image-for-s390x",
         "name": "e2e / podvm_mkosi_s390x / Build mkosi image for s390x",
         "jobName": "e2e / podvm_mkosi_s390x / Build mkosi image for s390x",
         "fullName": "e2e / podvm_mkosi_s390x / Build mkosi image for s390x",
-        "status": "failed",
-        "duration": "10m 53s",
-        "lastFailure": "20h ago",
-        "lastSuccess": "Yesterday",
+        "status": "running",
+        "duration": "N/A",
+        "lastFailure": "Yesterday",
+        "lastSuccess": "2 days ago",
         "weatherHistory": [
           {
             "date": "2026-04-13T00:00:00.000Z",
@@ -40646,22 +41675,19 @@
           {
             "date": "2026-04-22T00:00:00.000Z",
             "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "24761371116",
+            "jobId": "72445697691",
+            "duration": "N/A",
             "failureStep": null
           }
         ],
         "failureCount": 1,
         "retried": 0,
-        "runId": "24705248808",
-        "jobId": "72257012079",
+        "runId": "24761371116",
+        "jobId": "72445697691",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
-        "error": {
-          "step": "Build and push image for docker provider",
-          "output": "View full log on GitHub for details"
-        }
+        "error": null
       }
     ]
   },
@@ -41991,6 +43017,12 @@
     "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)": {
       "occurrences": [
         {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "rke2 · runtime-rs · nydus · guest-pull",
+          "jobId": "72423177421",
+          "runId": "24753582597"
+        },
+        {
           "date": "2026-04-14T00:00:00.000Z",
           "jobName": "microk8s · qemu-coco-dev · nydus · guest-pull",
           "jobId": "71185531802",
@@ -42039,7 +43071,7 @@
           "runId": "23774354382"
         }
       ],
-      "totalCount": 8,
+      "totalCount": 9,
       "affectedJobs": [
         {
           "jobName": "k3s · qemu-coco-dev · nydus · guest-pull",
@@ -42069,6 +43101,14 @@
           ]
         },
         {
+          "jobName": "rke2 · runtime-rs · nydus · guest-pull",
+          "count": 1,
+          "latestDate": "2026-04-22T00:00:00.000Z",
+          "jobIds": [
+            "72423177421"
+          ]
+        },
+        {
           "jobName": "microk8s · qemu-coco-dev · nydus · guest-pull",
           "count": 1,
           "latestDate": "2026-04-14T00:00:00.000Z",
@@ -42085,10 +43125,16 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 5
+      "uniqueJobsAffected": 6
     },
     "Test that creating a container from an authenticated image, with no credentials fails (with initdata)": {
       "occurrences": [
+        {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "rke2 · runtime-rs · nydus · guest-pull",
+          "jobId": "72423177421",
+          "runId": "24753582597"
+        },
         {
           "date": "2026-04-01T00:00:00.000Z",
           "jobName": "k3s · qemu-coco-dev · nydus · guest-pull",
@@ -42126,7 +43172,7 @@
           "runId": "23774354382"
         }
       ],
-      "totalCount": 6,
+      "totalCount": 7,
       "affectedJobs": [
         {
           "jobName": "k3s · qemu-coco-dev · nydus · guest-pull",
@@ -42154,9 +43200,17 @@
             "69449783858",
             "69273924583"
           ]
+        },
+        {
+          "jobName": "rke2 · runtime-rs · nydus · guest-pull",
+          "count": 1,
+          "latestDate": "2026-04-22T00:00:00.000Z",
+          "jobIds": [
+            "72423177421"
+          ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Create a pod from an unsigned image, on an insecureAcceptAnything registry works": {
       "occurrences": [
@@ -45693,6 +46747,12 @@
     "Run a cron job to completion": {
       "occurrences": [
         {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "k3s · runtime-rs · nydus · guest-pull",
+          "jobId": "72423177414",
+          "runId": "24753582597"
+        },
+        {
           "date": "2026-04-21T00:00:00.000Z",
           "jobName": "k3s · runtime-rs · nydus · guest-pull",
           "jobId": "72234800126",
@@ -45771,7 +46831,7 @@
           "runId": "23466785982"
         }
       ],
-      "totalCount": 13,
+      "totalCount": 14,
       "affectedJobs": [
         {
           "jobName": "k3s · qemu-coco-dev · experimental force guest pull",
@@ -45787,9 +46847,10 @@
         },
         {
           "jobName": "k3s · runtime-rs · nydus · guest-pull",
-          "count": 3,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 4,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177414",
             "72234800126",
             "70528129132",
             "68458234963"
@@ -48066,6 +49127,30 @@
     "Liveness http probe": {
       "occurrences": [
         {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "k0s · qemu-coco-dev · nydus · guest-pull",
+          "jobId": "72423177402",
+          "runId": "24753582597"
+        },
+        {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "k0s · runtime-rs · nydus · guest-pull",
+          "jobId": "72423177395",
+          "runId": "24753582597"
+        },
+        {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "microk8s · qemu-coco-dev · nydus · guest-pull",
+          "jobId": "72423177409",
+          "runId": "24753582597"
+        },
+        {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "microk8s · runtime-rs · nydus · guest-pull",
+          "jobId": "72423177416",
+          "runId": "24753582597"
+        },
+        {
           "date": "2026-04-21T00:00:00.000Z",
           "jobName": "k0s · qemu-coco-dev · nydus · guest-pull",
           "jobId": "72234800131",
@@ -48528,13 +49613,14 @@
           "runId": "23774354382"
         }
       ],
-      "totalCount": 77,
+      "totalCount": 81,
       "affectedJobs": [
         {
           "jobName": "k0s · qemu-coco-dev · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177402",
             "72234800131",
             "72050894017",
             "71982042285",
@@ -48554,9 +49640,10 @@
         },
         {
           "jobName": "k0s · runtime-rs · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177395",
             "72234800061",
             "72050894010",
             "71982042288",
@@ -48576,9 +49663,10 @@
         },
         {
           "jobName": "microk8s · qemu-coco-dev · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177409",
             "72234800119",
             "72050894019",
             "71982042296",
@@ -48598,9 +49686,10 @@
         },
         {
           "jobName": "microk8s · runtime-rs · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177416",
             "72234800132",
             "72050894002",
             "71982042287",
@@ -48683,6 +49772,30 @@
     "Liveness tcp probe": {
       "occurrences": [
         {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "k0s · qemu-coco-dev · nydus · guest-pull",
+          "jobId": "72423177402",
+          "runId": "24753582597"
+        },
+        {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "k0s · runtime-rs · nydus · guest-pull",
+          "jobId": "72423177395",
+          "runId": "24753582597"
+        },
+        {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "microk8s · qemu-coco-dev · nydus · guest-pull",
+          "jobId": "72423177409",
+          "runId": "24753582597"
+        },
+        {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "microk8s · runtime-rs · nydus · guest-pull",
+          "jobId": "72423177416",
+          "runId": "24753582597"
+        },
+        {
           "date": "2026-04-21T00:00:00.000Z",
           "jobName": "k0s · qemu-coco-dev · nydus · guest-pull",
           "jobId": "72234800131",
@@ -49145,13 +50258,14 @@
           "runId": "23774354382"
         }
       ],
-      "totalCount": 77,
+      "totalCount": 81,
       "affectedJobs": [
         {
           "jobName": "k0s · qemu-coco-dev · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177402",
             "72234800131",
             "72050894017",
             "71982042285",
@@ -49171,9 +50285,10 @@
         },
         {
           "jobName": "k0s · runtime-rs · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177395",
             "72234800061",
             "72050894010",
             "71982042288",
@@ -49193,9 +50308,10 @@
         },
         {
           "jobName": "microk8s · qemu-coco-dev · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177409",
             "72234800119",
             "72050894019",
             "71982042296",
@@ -49215,9 +50331,10 @@
         },
         {
           "jobName": "microk8s · runtime-rs · nydus · guest-pull",
-          "count": 15,
-          "latestDate": "2026-04-21T00:00:00.000Z",
+          "count": 16,
+          "latestDate": "2026-04-22T00:00:00.000Z",
           "jobIds": [
+            "72423177416",
             "72234800132",
             "72050894002",
             "71982042287",
@@ -51476,14 +52593,28 @@
     "Test cannot launch pod with measured boot enabled and incorrect hash": {
       "occurrences": [
         {
+          "date": "2026-04-22T00:00:00.000Z",
+          "jobName": "AMD SEV-SNP with nydus snapshotter",
+          "jobId": "72423177276",
+          "runId": "24753582597"
+        },
+        {
           "date": "2026-04-01T00:00:00.000Z",
           "jobName": "Intel TDX with nydus snapshotter",
           "jobId": "69449783753",
           "runId": "23825845325"
         }
       ],
-      "totalCount": 1,
+      "totalCount": 2,
       "affectedJobs": [
+        {
+          "jobName": "AMD SEV-SNP with nydus snapshotter",
+          "count": 1,
+          "latestDate": "2026-04-22T00:00:00.000Z",
+          "jobIds": [
+            "72423177276"
+          ]
+        },
         {
           "jobName": "Intel TDX with nydus snapshotter",
           "count": 1,
@@ -51493,7 +52624,7 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 1
+      "uniqueJobsAffected": 2
     },
     "Test we cannot pull a large image that pull time exceeds createcontainer timeout inside the guest": {
       "occurrences": [
