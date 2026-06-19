@@ -1,8 +1,8 @@
 {
-  "lastRefresh": "2026-06-18T22:23:44.428Z",
+  "lastRefresh": "2026-06-19T05:03:46.713Z",
   "periodDays": 14,
-  "totalFailures": 104,
-  "totalPRs": 13,
+  "totalFailures": 106,
+  "totalPRs": 14,
   "confirmedFlakyCount": 21,
   "mergedDespiteFailureCount": 3,
   "failedTests": [
@@ -1762,6 +1762,54 @@
       ]
     },
     {
+      "name": "Run a cron job to completion",
+      "file": "k8s-cron-job.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-06-18"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-06-18",
+          "prNumber": "13241",
+          "prTitle": "agent: report 128+signal as exit code for signal-terminated processes",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
+          "jobId": "82251005235",
+          "runId": "27793189300",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-06-18",
+          "prNumber": "13241",
+          "prTitle": "agent: report 128+signal as exit code for signal-terminated processes",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
+          "jobId": "82251005235",
+          "runId": "27793189300",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "Cannot get CDH resource when deny-all policy is set",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 2,
@@ -1963,7 +2011,7 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 22,
+    "totalFailedTests": 23,
     "confirmedFlaky": 21,
     "mergedDespiteFailure": 3,
     "mostAffectedJob": {
@@ -1974,10 +2022,6 @@
       "mergedCount": 0
     },
     "trend": [
-      {
-        "date": "2026-06-05",
-        "failures": 0
-      },
       {
         "date": "2026-06-06",
         "failures": 0
@@ -2028,7 +2072,11 @@
       },
       {
         "date": "2026-06-18",
-        "failures": 36
+        "failures": 38
+      },
+      {
+        "date": "2026-06-19",
+        "failures": 0
       }
     ],
     "jobBreakdown": [
@@ -2096,10 +2144,10 @@
         "mergedCount": 2
       },
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh-runtime-rs, minimum)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh-runtime-rs, minimum)",
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory",
         "count": 2,
-        "flakyCount": 2,
+        "flakyCount": 0,
         "mergedCount": 0
       }
     ]
