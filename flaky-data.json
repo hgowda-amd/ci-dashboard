@@ -1,20 +1,20 @@
 {
-  "lastRefresh": "2026-06-20T14:20:34.289Z",
+  "lastRefresh": "2026-06-20T17:45:54.036Z",
   "periodDays": 14,
-  "totalFailures": 152,
+  "totalFailures": 154,
   "totalPRs": 13,
-  "confirmedFlakyCount": 26,
+  "confirmedFlakyCount": 28,
   "mergedDespiteFailureCount": 2,
   "failedTests": [
     {
       "name": "Pods establishing a VPN connection using openvpn",
       "file": "k8s-openvpn.bats",
-      "totalFailures": 26,
-      "flakyCount": 22,
-      "mergedCount": 4,
+      "totalFailures": 24,
+      "flakyCount": 20,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
-      "uniquePRs": 7,
+      "uniquePRs": 6,
       "uniqueDates": [
         "2026-06-19",
         "2026-06-17"
@@ -23,9 +23,9 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "count": 16,
-          "flakyCount": 12,
-          "mergedCount": 4
+          "count": 14,
+          "flakyCount": 10,
+          "mergedCount": 2
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
@@ -251,30 +251,6 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
-        },
-        {
-          "date": "2026-06-17",
-          "prNumber": "13237",
-          "prTitle": "osbuilder: Simplify version fetching",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "81876331465",
-          "runId": "27675030109",
-          "runAttempt": 2,
-          "isFlaky": true,
-          "prMerged": true
-        },
-        {
-          "date": "2026-06-17",
-          "prNumber": "13237",
-          "prTitle": "osbuilder: Simplify version fetching",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "81876331465",
-          "runId": "27675030109",
-          "runAttempt": 2,
-          "isFlaky": true,
-          "prMerged": true
         },
         {
           "date": "2026-06-17",
@@ -2367,6 +2343,102 @@
       ]
     },
     {
+      "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+      "file": "k8s-measured-rootfs.bats",
+      "totalFailures": 2,
+      "flakyCount": 2,
+      "mergedCount": 0,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-06-20"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-06-20",
+          "prNumber": "13216",
+          "prTitle": "runtime-rs: Add support for hot-unplugging block devices",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "82490367258",
+          "runId": "27873578743",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-06-20",
+          "prNumber": "13216",
+          "prTitle": "runtime-rs: Add support for hot-unplugging block devices",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "82490367258",
+          "runId": "27873578743",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        }
+      ]
+    },
+    {
+      "name": "Support seccomp runtime/default profile",
+      "file": "k8s-seccomp.bats",
+      "totalFailures": 2,
+      "flakyCount": 2,
+      "mergedCount": 0,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-06-20"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-06-20",
+          "prNumber": "13216",
+          "prTitle": "runtime-rs: Add support for hot-unplugging block devices",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobId": "82490367345",
+          "runId": "27873578743",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-06-20",
+          "prNumber": "13216",
+          "prTitle": "runtime-rs: Add support for hot-unplugging block devices",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobId": "82490367345",
+          "runId": "27873578743",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "Parallel jobs",
       "file": "k8s-parallel.bats",
       "totalFailures": 2,
@@ -2712,15 +2784,15 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 28,
-    "confirmedFlaky": 26,
+    "totalFailedTests": 30,
+    "confirmedFlaky": 28,
     "mergedDespiteFailure": 2,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-      "count": 44,
-      "flakyCount": 30,
-      "mergedCount": 4
+      "count": 42,
+      "flakyCount": 28,
+      "mergedCount": 2
     },
     "trend": [
       {
@@ -2765,7 +2837,7 @@
       },
       {
         "date": "2026-06-17",
-        "failures": 60
+        "failures": 58
       },
       {
         "date": "2026-06-18",
@@ -2777,16 +2849,16 @@
       },
       {
         "date": "2026-06-20",
-        "failures": 0
+        "failures": 4
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-        "count": 44,
-        "flakyCount": 30,
-        "mergedCount": 4
+        "count": 42,
+        "flakyCount": 28,
+        "mergedCount": 2
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
@@ -2845,8 +2917,8 @@
         "mergedCount": 2
       },
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "count": 2,
         "flakyCount": 2,
         "mergedCount": 0
