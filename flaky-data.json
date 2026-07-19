@@ -1,20 +1,20 @@
 {
-  "lastRefresh": "2026-07-19T17:03:14.178Z",
+  "lastRefresh": "2026-07-19T20:56:10.125Z",
   "periodDays": 14,
-  "totalFailures": 18,
-  "totalPRs": 5,
+  "totalFailures": 22,
+  "totalPRs": 6,
   "confirmedFlakyCount": 1,
   "mergedDespiteFailureCount": 2,
   "failedTests": [
     {
       "name": "/dev hostPath volume bind mounts the guest device and skips virtio-fs",
       "file": "k8s-hostpath-volume.bats",
-      "totalFailures": 12,
+      "totalFailures": 14,
       "flakyCount": 0,
       "mergedCount": 6,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 5,
+      "uniquePRs": 6,
       "uniqueDates": [
         "2026-07-19",
         "2026-07-18",
@@ -24,7 +24,7 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
-          "count": 12,
+          "count": 14,
           "flakyCount": 0,
           "mergedCount": 6
         }
@@ -103,6 +103,30 @@
           "prMerged": false
         },
         {
+          "date": "2026-07-19",
+          "prNumber": "13338",
+          "prTitle": "runtime-rs: resource: place the runtime in the sandbox cgroup synchronously",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
+          "jobId": "88233657618",
+          "runId": "29701637214",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-07-19",
+          "prNumber": "13338",
+          "prTitle": "runtime-rs: resource: place the runtime in the sandbox cgroup synchronously",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
+          "jobId": "88233657618",
+          "runId": "29701637214",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
           "date": "2026-07-18",
           "prNumber": "13358",
           "prTitle": "runtime: Dynamically discover hugepage size",
@@ -173,6 +197,54 @@
           "runAttempt": 5,
           "isFlaky": false,
           "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "initContainer with shared volume",
+      "file": "k8s-shared-volume.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-07-19"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-07-19",
+          "prNumber": "13338",
+          "prTitle": "runtime-rs: resource: place the runtime in the sandbox cgroup synchronously",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobId": "88233425909",
+          "runId": "29701637214",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-07-19",
+          "prNumber": "13338",
+          "prTitle": "runtime-rs: resource: place the runtime in the sandbox cgroup synchronously",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+          "jobId": "88233425909",
+          "runId": "29701637214",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
         }
       ]
     },
@@ -322,13 +394,13 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 4,
+    "totalFailedTests": 5,
     "confirmedFlaky": 1,
     "mergedDespiteFailure": 2,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
-      "count": 14,
+      "count": 16,
       "flakyCount": 0,
       "mergedCount": 6
     },
@@ -387,16 +459,23 @@
       },
       {
         "date": "2026-07-19",
-        "failures": 10
+        "failures": 14
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
-        "count": 14,
+        "count": 16,
         "flakyCount": 0,
         "mergedCount": 6
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure-runtime-rs, small)",
+        "count": 2,
+        "flakyCount": 0,
+        "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
