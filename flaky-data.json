@@ -1,18 +1,18 @@
 {
-  "lastRefresh": "2026-08-08T16:42:39.299Z",
+  "lastRefresh": "2026-08-08T20:39:41.611Z",
   "periodDays": 14,
-  "totalFailures": 16,
-  "totalPRs": 9,
-  "confirmedFlakyCount": 2,
+  "totalFailures": 14,
+  "totalPRs": 7,
+  "confirmedFlakyCount": 3,
   "mergedDespiteFailureCount": 0,
   "failedTests": [
     {
       "name": "QEMU propagates ConfigMap updates while rootless",
       "file": "k8s-qemu-rootless-sandbox.bats",
       "totalFailures": 9,
-      "flakyCount": 0,
+      "flakyCount": 3,
       "mergedCount": 0,
-      "isConfirmedFlaky": false,
+      "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 1,
       "uniqueDates": [
@@ -37,7 +37,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 3,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         }
       ],
@@ -123,7 +123,7 @@
           "jobId": "93065415336",
           "runId": "31230430239",
           "runAttempt": 2,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -135,7 +135,7 @@
           "jobId": "93065415336",
           "runId": "31230430239",
           "runAttempt": 2,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -147,7 +147,7 @@
           "jobId": "93065415336",
           "runId": "31230430239",
           "runAttempt": 2,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         }
       ]
@@ -213,54 +213,6 @@
       ]
     },
     {
-      "name": "setup_file failed",
-      "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 2,
-      "flakyCount": 0,
-      "mergedCount": 0,
-      "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-08-08"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-08-08",
-          "prNumber": "13570",
-          "prTitle": "kata-ctl: add cp, and let exec run a single command",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "93117021745",
-          "runId": "31262439429",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-08-08",
-          "prNumber": "13570",
-          "prTitle": "kata-ctl: add cp, and let exec run a single command",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "93117021745",
-          "runId": "31262439429",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        }
-      ]
-    },
-    {
       "name": "Pod that performs ip6tables setup",
       "file": "k8s-ip6tables.bats",
       "totalFailures": 2,
@@ -310,8 +262,8 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 4,
-    "confirmedFlaky": 2,
+    "totalFailedTests": 3,
+    "confirmedFlaky": 3,
     "mergedDespiteFailure": 0,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
@@ -375,7 +327,7 @@
       },
       {
         "date": "2026-08-08",
-        "failures": 14
+        "failures": 12
       }
     ],
     "jobBreakdown": [
@@ -397,7 +349,7 @@
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
         "count": 3,
-        "flakyCount": 0,
+        "flakyCount": 3,
         "mergedCount": 0
       },
       {
@@ -405,13 +357,6 @@
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity)",
         "count": 3,
         "flakyCount": 3,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-        "count": 2,
-        "flakyCount": 0,
         "mergedCount": 0
       },
       {
