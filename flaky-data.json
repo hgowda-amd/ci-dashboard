@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-09-02T22:32:21.946Z",
+  "lastRefresh": "2026-09-03T03:43:20.079Z",
   "periodDays": 14,
-  "totalFailures": 25,
+  "totalFailures": 27,
   "totalPRs": 10,
-  "confirmedFlakyCount": 5,
-  "mergedDespiteFailureCount": 5,
+  "confirmedFlakyCount": 6,
+  "mergedDespiteFailureCount": 6,
   "failedTests": [
     {
       "name": "VMM runs rootless with seccomp enabled",
@@ -417,6 +417,54 @@
       ]
     },
     {
+      "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
+      "file": "k8s-measured-rootfs.bats",
+      "totalFailures": 2,
+      "flakyCount": 2,
+      "mergedCount": 2,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-08-31"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-08-31",
+          "prNumber": "13673",
+          "prTitle": "runtime-rs: enable QEMU sandbox for NVIDIA configs",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "99566973165",
+          "runId": "33413771475",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-08-31",
+          "prNumber": "13673",
+          "prTitle": "runtime-rs: enable QEMU sandbox for NVIDIA configs",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "99566973165",
+          "runId": "33413771475",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        }
+      ]
+    },
+    {
       "name": "runtime, virtiofsd and VMM share the pod sandbox cgroup",
       "file": "k8s-sandbox-cgroup-placement.bats",
       "totalFailures": 2,
@@ -514,9 +562,9 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 8,
-    "confirmedFlaky": 5,
-    "mergedDespiteFailure": 5,
+    "totalFailedTests": 9,
+    "confirmedFlaky": 6,
+    "mergedDespiteFailure": 6,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
@@ -525,10 +573,6 @@
       "mergedCount": 6
     },
     "trend": [
-      {
-        "date": "2026-08-20",
-        "failures": 0
-      },
       {
         "date": "2026-08-21",
         "failures": 0
@@ -571,7 +615,7 @@
       },
       {
         "date": "2026-08-31",
-        "failures": 11
+        "failures": 13
       },
       {
         "date": "2026-09-01",
@@ -580,6 +624,10 @@
       {
         "date": "2026-09-02",
         "failures": 8
+      },
+      {
+        "date": "2026-09-03",
+        "failures": 0
       }
     ],
     "jobBreakdown": [
@@ -624,6 +672,13 @@
         "count": 2,
         "flakyCount": 2,
         "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "count": 2,
+        "flakyCount": 2,
+        "mergedCount": 2
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
