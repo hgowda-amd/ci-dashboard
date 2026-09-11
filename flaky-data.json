@@ -1,9 +1,9 @@
 {
-  "lastRefresh": "2026-09-11T03:53:00.039Z",
+  "lastRefresh": "2026-09-11T08:51:44.757Z",
   "periodDays": 14,
-  "totalFailures": 50,
+  "totalFailures": 52,
   "totalPRs": 9,
-  "confirmedFlakyCount": 5,
+  "confirmedFlakyCount": 6,
   "mergedDespiteFailureCount": 5,
   "failedTests": [
     {
@@ -694,6 +694,54 @@
       ]
     },
     {
+      "name": "Pods establishing a VPN connection using openvpn",
+      "file": "k8s-openvpn.bats",
+      "totalFailures": 2,
+      "flakyCount": 2,
+      "mergedCount": 0,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-09-11"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-09-11",
+          "prNumber": "13805",
+          "prTitle": "runtime: allow disabling CLH nested virtualization",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "103129274776",
+          "runId": "34555025420",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-09-11",
+          "prNumber": "13805",
+          "prTitle": "runtime: allow disabling CLH nested virtualization",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "103129274776",
+          "runId": "34555025420",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "Run a job to completion",
       "file": "k8s-job.bats",
       "totalFailures": 2,
@@ -935,8 +983,8 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 12,
-    "confirmedFlaky": 5,
+    "totalFailedTests": 13,
+    "confirmedFlaky": 6,
     "mergedDespiteFailure": 5,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
@@ -1000,7 +1048,7 @@
       },
       {
         "date": "2026-09-11",
-        "failures": 9
+        "failures": 11
       }
     ],
     "jobBreakdown": [
@@ -1017,6 +1065,13 @@
         "count": 9,
         "flakyCount": 5,
         "mergedCount": 5
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+        "count": 6,
+        "flakyCount": 2,
+        "mergedCount": 2
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
@@ -1037,13 +1092,6 @@
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu, latest, erofs, disk, unmerged)",
         "count": 4,
         "flakyCount": 2,
-        "mergedCount": 2
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-        "count": 4,
-        "flakyCount": 0,
         "mergedCount": 2
       },
       {
