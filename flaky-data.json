@@ -1,7 +1,7 @@
 {
-  "lastRefresh": "2026-09-15T13:29:21.241Z",
+  "lastRefresh": "2026-09-15T19:40:14.547Z",
   "periodDays": 14,
-  "totalFailures": 514,
+  "totalFailures": 510,
   "totalPRs": 12,
   "confirmedFlakyCount": 31,
   "mergedDespiteFailureCount": 34,
@@ -9,30 +9,29 @@
     {
       "name": "Running with postStart and preStop handlers",
       "file": "k8s-attach-handlers.bats",
-      "totalFailures": 21,
+      "totalFailures": 17,
       "flakyCount": 0,
       "mergedCount": 6,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 5,
+      "uniquePRs": 4,
       "uniqueDates": [
-        "2026-09-14",
-        "2026-09-11"
+        "2026-09-14"
       ],
       "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "count": 7,
-          "flakyCount": 0,
-          "mergedCount": 0
-        },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
           "count": 6,
           "flakyCount": 0,
           "mergedCount": 6
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "count": 5,
+          "flakyCount": 0,
+          "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
@@ -45,13 +44,6 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu, latest)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu, latest)",
           "count": 3,
-          "flakyCount": 0,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "count": 2,
           "flakyCount": 0,
           "mergedCount": 0
         }
@@ -257,54 +249,6 @@
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
           "jobId": "104161857156",
           "runId": "34892325874",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-09-11",
-          "prNumber": "13821",
-          "prTitle": "ci.ocp: Fixes to peer-pods pipeline",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobId": "103309342226",
-          "runId": "34609209145",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-09-11",
-          "prNumber": "13821",
-          "prTitle": "ci.ocp: Fixes to peer-pods pipeline",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobId": "103309342226",
-          "runId": "34609209145",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-09-11",
-          "prNumber": "13821",
-          "prTitle": "ci.ocp: Fixes to peer-pods pipeline",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "jobId": "103309342390",
-          "runId": "34609209145",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-09-11",
-          "prNumber": "13821",
-          "prTitle": "ci.ocp: Fixes to peer-pods pipeline",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "jobId": "103309342390",
-          "runId": "34609209145",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
@@ -8587,6 +8531,54 @@
       ]
     },
     {
+      "name": "Pod that performs ip6tables setup",
+      "file": "k8s-ip6tables.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-09-15"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-09-15",
+          "prNumber": "13849",
+          "prTitle": "nvgpu: build the gpu extension the final tarball requires",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "104466884205",
+          "runId": "34989686964",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-09-15",
+          "prNumber": "13849",
+          "prTitle": "nvgpu: build the gpu extension the final tarball requires",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "104466884205",
+          "runId": "34989686964",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "NUMA: explicit numa_mapping in TOML pins the sandbox to the chosen host node",
       "file": "k8s-nvidia-numa.bats",
       "totalFailures": 2,
@@ -8729,54 +8721,6 @@
           "prMerged": true
         }
       ]
-    },
-    {
-      "name": "Plain ephemeral data storage discard reclaims host blocks",
-      "file": "k8s-plain-ephemeral-data-storage.bats",
-      "totalFailures": 2,
-      "flakyCount": 0,
-      "mergedCount": 0,
-      "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-09-11"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-09-11",
-          "prNumber": "13821",
-          "prTitle": "ci.ocp: Fixes to peer-pods pipeline",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
-          "jobId": "103309344380",
-          "runId": "34609209145",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-09-11",
-          "prNumber": "13821",
-          "prTitle": "ci.ocp: Fixes to peer-pods pipeline",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
-          "jobId": "103309344380",
-          "runId": "34609209145",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        }
-      ]
     }
   ],
   "summary": {
@@ -8829,7 +8773,7 @@
       },
       {
         "date": "2026-09-11",
-        "failures": 21
+        "failures": 15
       },
       {
         "date": "2026-09-12",
@@ -8845,7 +8789,7 @@
       },
       {
         "date": "2026-09-15",
-        "failures": 0
+        "failures": 2
       }
     ],
     "jobBreakdown": [
@@ -8859,7 +8803,7 @@
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-        "count": 63,
+        "count": 61,
         "flakyCount": 2,
         "mergedCount": 2
       },
