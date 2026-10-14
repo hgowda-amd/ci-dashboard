@@ -1,8 +1,8 @@
 {
-  "lastRefresh": "2026-10-13T23:47:52.201Z",
+  "lastRefresh": "2026-10-14T04:17:42.963Z",
   "periodDays": 14,
-  "totalFailures": 117,
-  "totalPRs": 11,
+  "totalFailures": 120,
+  "totalPRs": 12,
   "confirmedFlakyCount": 4,
   "mergedDespiteFailureCount": 4,
   "failedTests": [
@@ -478,6 +478,109 @@
       ]
     },
     {
+      "name": "Can get CDH resource when affirming policy is set with reference values",
+      "file": "k8s-confidential-attestation.bats",
+      "totalFailures": 6,
+      "flakyCount": 3,
+      "mergedCount": 0,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 2,
+      "uniqueDates": [
+        "2026-10-10"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "count": 3,
+          "flakyCount": 3,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-10",
+          "prNumber": "14006",
+          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobId": "114178314612",
+          "runId": "38036054581",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "14006",
+          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobId": "114178314612",
+          "runId": "38036054581",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "14006",
+          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobId": "114178314612",
+          "runId": "38036054581",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "13997",
+          "prTitle": "agent: Refuse to start when guest SELinux has no policy",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "114198399588",
+          "runId": "38045053114",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "13997",
+          "prTitle": "agent: Refuse to start when guest SELinux has no policy",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "114198399588",
+          "runId": "38045053114",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "13997",
+          "prTitle": "agent: Refuse to start when guest SELinux has no policy",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "114198399588",
+          "runId": "38045053114",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "Running with postStart and preStop handlers",
       "file": "k8s-attach-handlers.bats",
       "totalFailures": 4,
@@ -705,66 +808,6 @@
           "runId": "37982923431",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Can get CDH resource when affirming policy is set with reference values",
-      "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 3,
-      "flakyCount": 3,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-10-10"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "count": 3,
-          "flakyCount": 3,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-10-10",
-          "prNumber": "14006",
-          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "jobId": "114178314612",
-          "runId": "38036054581",
-          "runAttempt": 2,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-10",
-          "prNumber": "14006",
-          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "jobId": "114178314612",
-          "runId": "38036054581",
-          "runAttempt": 2,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-10",
-          "prNumber": "14006",
-          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
-          "jobId": "114178314612",
-          "runId": "38036054581",
-          "runAttempt": 2,
-          "isFlaky": true,
           "prMerged": false
         }
       ]
@@ -2523,10 +2566,6 @@
     },
     "trend": [
       {
-        "date": "2026-09-30",
-        "failures": 0
-      },
-      {
         "date": "2026-10-01",
         "failures": 0
       },
@@ -2564,7 +2603,7 @@
       },
       {
         "date": "2026-10-10",
-        "failures": 3
+        "failures": 6
       },
       {
         "date": "2026-10-11",
@@ -2577,6 +2616,10 @@
       {
         "date": "2026-10-13",
         "failures": 16
+      },
+      {
+        "date": "2026-10-14",
+        "failures": 0
       }
     ],
     "jobBreakdown": [
@@ -2609,6 +2652,13 @@
         "mergedCount": 2
       },
       {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "count": 7,
+        "flakyCount": 2,
+        "mergedCount": 0
+      },
+      {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
         "count": 5,
@@ -2628,13 +2678,6 @@
         "count": 4,
         "flakyCount": 0,
         "mergedCount": 4
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "count": 4,
-        "flakyCount": 2,
-        "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
