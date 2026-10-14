@@ -1,11 +1,583 @@
 {
-  "lastRefresh": "2026-10-14T13:34:47.385Z",
+  "lastRefresh": "2026-10-14T20:12:19.236Z",
   "periodDays": 14,
-  "totalFailures": 84,
-  "totalPRs": 8,
-  "confirmedFlakyCount": 7,
-  "mergedDespiteFailureCount": 3,
+  "totalFailures": 127,
+  "totalPRs": 11,
+  "confirmedFlakyCount": 13,
+  "mergedDespiteFailureCount": 13,
   "failedTests": [
+    {
+      "name": "setup_file failed",
+      "file": "k8s-nvidia-dcgm.bats",
+      "totalFailures": 22,
+      "flakyCount": 20,
+      "mergedCount": 22,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 3,
+      "uniqueDates": [
+        "2026-10-14",
+        "2026-10-13"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "count": 10,
+          "flakyCount": 8,
+          "mergedCount": 10
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 4,
+          "flakyCount": 4,
+          "mergedCount": 4
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "count": 4,
+          "flakyCount": 4,
+          "mergedCount": 4
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "count": 4,
+          "flakyCount": 4,
+          "mergedCount": 4
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "115867302282",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "115867302282",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobId": "115867302283",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobId": "115867302283",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "115787962180",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "115787962180",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobId": "115787962278",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+          "jobId": "115787962278",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-13",
+          "prNumber": "14041",
+          "prTitle": "deps: Bump quinn-proto to 0.11.18",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115402005507",
+          "runId": "38426215198",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-13",
+          "prNumber": "14041",
+          "prTitle": "deps: Bump quinn-proto to 0.11.18",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115402005507",
+          "runId": "38426215198",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Can get CDH resource when affirming policy is set with reference values",
+      "file": "k8s-confidential-attestation.bats",
+      "totalFailures": 18,
+      "flakyCount": 15,
+      "mergedCount": 12,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 4,
+      "uniqueDates": [
+        "2026-10-14",
+        "2026-10-10"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 6,
+          "flakyCount": 6,
+          "mergedCount": 6
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "count": 6,
+          "flakyCount": 6,
+          "mergedCount": 6
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "count": 3,
+          "flakyCount": 3,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "14006",
+          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobId": "114178314612",
+          "runId": "38036054581",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "14006",
+          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobId": "114178314612",
+          "runId": "38036054581",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "14006",
+          "prTitle": "kata-deploy: nvidia: Set NFD enablement to false",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+          "jobId": "114178314612",
+          "runId": "38036054581",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "13997",
+          "prTitle": "agent: Refuse to start when guest SELinux has no policy",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "114198399588",
+          "runId": "38045053114",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "13997",
+          "prTitle": "agent: Refuse to start when guest SELinux has no policy",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "114198399588",
+          "runId": "38045053114",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-10",
+          "prNumber": "13997",
+          "prTitle": "agent: Refuse to start when guest SELinux has no policy",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "114198399588",
+          "runId": "38045053114",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
     {
       "name": "Direct volume backing file remains sparse",
       "file": "k8s-direct-volume.bats",
@@ -239,14 +811,14 @@
       ]
     },
     {
-      "name": "setup_file failed",
-      "file": "k8s-nvidia-vllm.bats",
-      "totalFailures": 10,
-      "flakyCount": 8,
-      "mergedCount": 2,
+      "name": "Get CDH resource",
+      "file": "k8s-confidential-attestation.bats",
+      "totalFailures": 11,
+      "flakyCount": 9,
+      "mergedCount": 11,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 3,
       "uniqueDates": [
         "2026-10-14",
         "2026-10-13"
@@ -255,73 +827,90 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "count": 6,
-          "flakyCount": 4,
-          "mergedCount": 2
+          "count": 8,
+          "flakyCount": 6,
+          "mergedCount": 8
         },
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 3,
+          "flakyCount": 3,
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "115787962180",
-          "runId": "38542863517",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
           "prNumber": "14004",
           "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "115787962180",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
           "prNumber": "14004",
           "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
-          "jobId": "115787962278",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
           "prNumber": "14004",
           "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
-          "jobId": "115787962278",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
@@ -333,7 +922,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
@@ -345,7 +934,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
@@ -357,19 +946,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-13",
@@ -398,129 +975,255 @@
       ]
     },
     {
-      "name": "Get CDH resource",
+      "name": "Cannot get CDH resource when affirming policy is set without reference values",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 8,
-      "flakyCount": 6,
-      "mergedCount": 2,
+      "totalFailures": 10,
+      "flakyCount": 10,
+      "mergedCount": 10,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
       "uniquePRs": 2,
       "uniqueDates": [
-        "2026-10-14",
-        "2026-10-13"
+        "2026-10-14"
       ],
       "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 5,
+          "flakyCount": 5,
+          "mergedCount": 5
+        },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "count": 5,
-          "flakyCount": 3,
-          "mergedCount": 2
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 3,
-          "flakyCount": 3,
-          "mergedCount": 0
+          "flakyCount": 5,
+          "mergedCount": 5
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
+          "jobId": "115867302189",
+          "runId": "38566178312",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-13",
-          "prNumber": "14041",
-          "prTitle": "deps: Bump quinn-proto to 0.11.18",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115402005507",
-          "runId": "38426215198",
-          "runAttempt": 1,
-          "isFlaky": false,
           "prMerged": true
         },
         {
-          "date": "2026-10-13",
-          "prNumber": "14041",
-          "prTitle": "deps: Bump quinn-proto to 0.11.18",
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115402005507",
-          "runId": "38426215198",
+          "jobId": "115867302445",
+          "runId": "38566178312",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Cannot get CDH resource when deny-all policy is set",
+      "file": "k8s-confidential-attestation.bats",
+      "totalFailures": 6,
+      "flakyCount": 6,
+      "mergedCount": 6,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
+      "uniqueDates": [
+        "2026-10-14"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "count": 4,
+          "flakyCount": 4,
+          "mergedCount": 4
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115787962159",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14004",
+          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115787962291",
+          "runId": "38542863517",
+          "runAttempt": 1,
+          "isFlaky": true,
           "prMerged": true
         }
       ]
@@ -530,9 +1233,9 @@
       "file": "k8s-attach-handlers.bats",
       "totalFailures": 6,
       "flakyCount": 0,
-      "mergedCount": 0,
+      "mergedCount": 4,
       "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
+      "mergedDespiteFailure": true,
       "uniquePRs": 2,
       "uniqueDates": [
         "2026-10-14",
@@ -545,7 +1248,7 @@
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
           "count": 4,
           "flakyCount": 0,
-          "mergedCount": 0
+          "mergedCount": 4
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
@@ -566,7 +1269,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
@@ -578,7 +1281,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-13",
@@ -590,7 +1293,7 @@
           "runId": "38450779236",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-13",
@@ -602,7 +1305,7 @@
           "runId": "38450779236",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-09",
@@ -631,69 +1334,50 @@
       ]
     },
     {
-      "name": "Cannot get CDH resource when affirming policy is set without reference values",
-      "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 6,
-      "flakyCount": 6,
-      "mergedCount": 0,
+      "name": "VMM runs rootless with seccomp enabled",
+      "file": "k8s-rootless-vmm.bats",
+      "totalFailures": 5,
+      "flakyCount": 5,
+      "mergedCount": 5,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
         "2026-10-14"
       ],
       "affectedJobs": [
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 3,
-          "flakyCount": 3,
-          "mergedCount": 0
-        },
-        {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "count": 3,
-          "flakyCount": 3,
-          "mergedCount": 0
+          "count": 5,
+          "flakyCount": 5,
+          "mergedCount": 5
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
+          "jobId": "115867302445",
+          "runId": "38566178312",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
@@ -705,7 +1389,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
@@ -717,7 +1401,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
@@ -729,189 +1413,7 @@
           "runId": "38542863517",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Can get CDH resource when affirming policy is set with reference values",
-      "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 6,
-      "flakyCount": 6,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-10-14"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 3,
-          "flakyCount": 3,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "count": 3,
-          "flakyCount": 3,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Cannot get CDH resource when deny-all policy is set",
-      "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 4,
-      "flakyCount": 4,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-10-14"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "115787962159",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         }
       ]
     },
@@ -920,9 +1422,9 @@
       "file": "k8s-devkit-debug-console.bats",
       "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
+      "mergedDespiteFailure": true,
       "uniquePRs": 2,
       "uniqueDates": [
         "2026-10-13",
@@ -934,7 +1436,7 @@
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh-runtime-rs, latest)",
           "count": 2,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
@@ -955,7 +1457,7 @@
           "runId": "38450779236",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-13",
@@ -967,7 +1469,7 @@
           "runId": "38450779236",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-09",
@@ -999,9 +1501,9 @@
       "name": "Test cannot launch pod with measured boot enabled and incorrect hash",
       "file": "k8s-measured-rootfs.bats",
       "totalFailures": 4,
-      "flakyCount": 0,
+      "flakyCount": 2,
       "mergedCount": 0,
-      "isConfirmedFlaky": false,
+      "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 2,
       "uniqueDates": [
@@ -1012,7 +1514,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 0,
+          "flakyCount": 2,
           "mergedCount": 0
         }
       ],
@@ -1026,7 +1528,7 @@
           "jobId": "113878166989",
           "runId": "37946301043",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -1038,7 +1540,7 @@
           "jobId": "113878166989",
           "runId": "37946301043",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -1068,13 +1570,73 @@
       ]
     },
     {
-      "name": "VMM runs rootless with seccomp enabled",
-      "file": "k8s-rootless-vmm.bats",
+      "name": "NUMA: small GPU workload right-sizes to the GPU's host NUMA node",
+      "file": "k8s-nvidia-numa.bats",
       "totalFailures": 3,
       "flakyCount": 3,
-      "mergedCount": 0,
+      "mergedCount": 3,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-10-14"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 3,
+          "flakyCount": 3,
+          "mergedCount": 3
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-14",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "115867302189",
+          "runId": "38566178312",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "CUDA Vector Addition Test",
+      "file": "k8s-nvidia-cuda.bats",
+      "totalFailures": 3,
+      "flakyCount": 3,
+      "mergedCount": 3,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
       "uniquePRs": 1,
       "uniqueDates": [
         "2026-10-14"
@@ -1085,45 +1647,45 @@
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "count": 3,
           "flakyCount": 3,
-          "mergedCount": 0
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
+          "jobId": "115867302445",
+          "runId": "38566178312",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
+          "jobId": "115867302445",
+          "runId": "38566178312",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-10-14",
-          "prNumber": "14004",
-          "prTitle": "build(deps): bump github.com/moby/sys/user from 0.4.0 to 0.4.1 in /src/runtime",
+          "prNumber": "14025",
+          "prTitle": "runtime: preserve no_new_privileges in exec requests",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-          "jobId": "115787962291",
-          "runId": "38542863517",
+          "jobId": "115867302445",
+          "runId": "38566178312",
           "runAttempt": 1,
           "isFlaky": true,
-          "prMerged": false
+          "prMerged": true
         }
       ]
     },
@@ -1131,10 +1693,10 @@
       "name": "Pod with sandbox_cgroup_only=false starts successfully",
       "file": "k8s-sandbox-cgroup.bats",
       "totalFailures": 2,
-      "flakyCount": 0,
-      "mergedCount": 0,
-      "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
+      "flakyCount": 2,
+      "mergedCount": 2,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
       "uniquePRs": 1,
       "uniqueDates": [
         "2026-10-13"
@@ -1144,8 +1706,8 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
           "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
+          "flakyCount": 2,
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -1158,8 +1720,8 @@
           "jobId": "115484948965",
           "runId": "38450612081",
           "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
+          "isFlaky": true,
+          "prMerged": true
         },
         {
           "date": "2026-10-13",
@@ -1170,8 +1732,8 @@
           "jobId": "115484948965",
           "runId": "38450612081",
           "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
+          "isFlaky": true,
+          "prMerged": true
         }
       ]
     },
@@ -1218,6 +1780,54 @@
           "jobId": "115402002842",
           "runId": "38426215198",
           "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Optional and Empty ConfigMap Volume for a pod",
+      "file": "k8s-optional-empty-configmap.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-10-13"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-13",
+          "prNumber": "14007",
+          "prTitle": "kernel: bump the guest kernel to 6.18.56 and drop the upstreamed dax patch",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "115249045139",
+          "runId": "38355256741",
+          "runAttempt": 2,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-10-13",
+          "prNumber": "14007",
+          "prTitle": "kernel: bump the guest kernel to 6.18.56 and drop the upstreamed dax patch",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "115249045139",
+          "runId": "38355256741",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": true
         }
@@ -1467,9 +2077,9 @@
       "name": "Check CPU constraints",
       "file": "k8s-cpu-ns.bats",
       "totalFailures": 2,
-      "flakyCount": 0,
+      "flakyCount": 2,
       "mergedCount": 0,
-      "isConfirmedFlaky": false,
+      "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 1,
       "uniqueDates": [
@@ -1480,7 +2090,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
           "count": 2,
-          "flakyCount": 0,
+          "flakyCount": 2,
           "mergedCount": 0
         }
       ],
@@ -1494,7 +2104,7 @@
           "jobId": "113878167250",
           "runId": "37946301043",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -1506,7 +2116,7 @@
           "jobId": "113878167250",
           "runId": "37946301043",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         }
       ]
@@ -1515,9 +2125,9 @@
       "name": "Optional and Empty Secret Volume for a pod",
       "file": "k8s-optional-empty-secret.bats",
       "totalFailures": 2,
-      "flakyCount": 0,
+      "flakyCount": 2,
       "mergedCount": 0,
-      "isConfirmedFlaky": false,
+      "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 1,
       "uniqueDates": [
@@ -1528,7 +2138,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, experimental-force-guest-pull)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, experimental-force-guest-pull)",
           "count": 2,
-          "flakyCount": 0,
+          "flakyCount": 2,
           "mergedCount": 0
         }
       ],
@@ -1542,7 +2152,7 @@
           "jobId": "113878167381",
           "runId": "37946301043",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -1554,22 +2164,22 @@
           "jobId": "113878167381",
           "runId": "37946301043",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         }
       ]
     }
   ],
   "summary": {
-    "totalFailedTests": 19,
-    "confirmedFlaky": 7,
-    "mergedDespiteFailure": 3,
+    "totalFailedTests": 22,
+    "confirmedFlaky": 13,
+    "mergedDespiteFailure": 13,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-      "count": 22,
-      "flakyCount": 18,
-      "mergedCount": 4
+      "count": 41,
+      "flakyCount": 37,
+      "mergedCount": 41
     },
     "trend": [
       {
@@ -1610,7 +2220,7 @@
       },
       {
         "date": "2026-10-10",
-        "failures": 0
+        "failures": 6
       },
       {
         "date": "2026-10-11",
@@ -1622,41 +2232,48 @@
       },
       {
         "date": "2026-10-13",
-        "failures": 12
+        "failures": 14
       },
       {
         "date": "2026-10-14",
-        "failures": 35
+        "failures": 70
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-runtime-rs-tests-on-amd64",
-        "count": 22,
-        "flakyCount": 18,
-        "mergedCount": 4
+        "count": 41,
+        "flakyCount": 37,
+        "mergedCount": 41
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 11,
-        "flakyCount": 11,
-        "mergedCount": 0
+        "count": 23,
+        "flakyCount": 23,
+        "mergedCount": 23
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-        "count": 8,
+        "count": 10,
         "flakyCount": 0,
-        "mergedCount": 0
+        "mergedCount": 6
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
         "count": 8,
-        "flakyCount": 0,
+        "flakyCount": 2,
         "mergedCount": 2
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "count": 7,
+        "flakyCount": 2,
+        "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev-runtime-rs, kubeadm)",
@@ -1666,36 +2283,29 @@
         "mergedCount": 0
       },
       {
-        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
         "count": 4,
-        "flakyCount": 0,
+        "flakyCount": 4,
+        "mergedCount": 4
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-runtime-rs-tests-on-amd64",
+        "count": 4,
+        "flakyCount": 4,
+        "mergedCount": 4
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp-runtime-rs)",
+        "count": 3,
+        "flakyCount": 3,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests-on-arm64 / run-k8s-tests-coco-arm64-k8s (qemu-coco-dev-runtime-rs, kubeadm)",
-        "count": 3,
-        "flakyCount": 0,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "count": 3,
-        "flakyCount": 0,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-        "count": 3,
-        "flakyCount": 0,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
         "count": 3,
         "flakyCount": 0,
         "mergedCount": 0
