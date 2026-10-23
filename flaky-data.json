@@ -1,18 +1,97 @@
 {
-  "lastRefresh": "2026-10-23T04:04:39.658Z",
+  "lastRefresh": "2026-10-23T09:21:00.080Z",
   "periodDays": 14,
-  "totalFailures": 57,
-  "totalPRs": 6,
-  "confirmedFlakyCount": 0,
+  "totalFailures": 65,
+  "totalPRs": 7,
+  "confirmedFlakyCount": 1,
   "mergedDespiteFailureCount": 2,
   "failedTests": [
     {
-      "name": "Empty dir volume when FSGroup is specified with non-root container",
-      "file": "k8s-empty-dirs.bats",
+      "name": "Running with postStart and preStop handlers",
+      "file": "k8s-attach-handlers.bats",
       "totalFailures": 4,
       "flakyCount": 0,
       "mergedCount": 0,
       "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-10-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-23",
+          "prNumber": "14114",
+          "prTitle": "packaging: build and ship td-shim firmware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "120301844750",
+          "runId": "39915235445",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-23",
+          "prNumber": "14114",
+          "prTitle": "packaging: build and ship td-shim firmware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "120301844750",
+          "runId": "39915235445",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-23",
+          "prNumber": "14114",
+          "prTitle": "packaging: build and ship td-shim firmware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "120301844985",
+          "runId": "39915235445",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-23",
+          "prNumber": "14114",
+          "prTitle": "packaging: build and ship td-shim firmware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "120301844985",
+          "runId": "39915235445",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
+      "name": "Empty dir volume when FSGroup is specified with non-root container",
+      "file": "k8s-empty-dirs.bats",
+      "totalFailures": 4,
+      "flakyCount": 2,
+      "mergedCount": 0,
+      "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 2,
       "uniqueDates": [
@@ -24,7 +103,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-tests-on-arm64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-tests-on-arm64",
           "count": 2,
-          "flakyCount": 0,
+          "flakyCount": 2,
           "mergedCount": 0
         },
         {
@@ -45,7 +124,7 @@
           "jobId": "119728102292",
           "runId": "39745466847",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -57,7 +136,7 @@
           "jobId": "119728102292",
           "runId": "39745466847",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -140,6 +219,102 @@
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev-runtime-rs, kubeadm)",
           "jobId": "119692773674",
           "runId": "39737039022",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
+      "name": "kata-ctl cp moves a file in and out of the devkit guest",
+      "file": "k8s-devkit-debug-console.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-10-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-23",
+          "prNumber": "14122",
+          "prTitle": "dragonball: Write guest memory snapshots as sparse files",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobId": "120318068040",
+          "runId": "39920261246",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-23",
+          "prNumber": "14122",
+          "prTitle": "dragonball: Write guest memory snapshots as sparse files",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobId": "120318068040",
+          "runId": "39920261246",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
+      "name": "VMM runs rootless with seccomp enabled",
+      "file": "k8s-rootless-vmm.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-10-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-10-23",
+          "prNumber": "14114",
+          "prTitle": "packaging: build and ship td-shim firmware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "120301845546",
+          "runId": "39915235445",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-10-23",
+          "prNumber": "14114",
+          "prTitle": "packaging: build and ship td-shim firmware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "120301845546",
+          "runId": "39915235445",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
@@ -1348,8 +1523,8 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 27,
-    "confirmedFlaky": 0,
+    "totalFailedTests": 30,
+    "confirmedFlaky": 1,
     "mergedDespiteFailure": 2,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev-runtime-rs, kubeadm)",
@@ -1413,7 +1588,7 @@
       },
       {
         "date": "2026-10-23",
-        "failures": 0
+        "failures": 8
       }
     ],
     "jobBreakdown": [
@@ -1425,10 +1600,24 @@
         "mergedCount": 0
       },
       {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+        "count": 4,
+        "flakyCount": 0,
+        "mergedCount": 2
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+        "count": 2,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-tests-on-arm64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-tests-on-arm64",
         "count": 2,
-        "flakyCount": 0,
+        "flakyCount": 2,
         "mergedCount": 0
       },
       {
@@ -1439,11 +1628,18 @@
         "mergedCount": 0
       },
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
         "count": 2,
         "flakyCount": 0,
-        "mergedCount": 2
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+        "count": 2,
+        "flakyCount": 0,
+        "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu, latest)",
