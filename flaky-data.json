@@ -1,20 +1,20 @@
 {
-  "lastRefresh": "2026-11-11T16:04:07.071Z",
+  "lastRefresh": "2026-11-11T22:41:57.495Z",
   "periodDays": 14,
-  "totalFailures": 1254,
-  "totalPRs": 4,
+  "totalFailures": 1258,
+  "totalPRs": 6,
   "confirmedFlakyCount": 60,
   "mergedDespiteFailureCount": 0,
   "failedTests": [
     {
       "name": "Running with postStart and preStop handlers",
       "file": "k8s-attach-handlers.bats",
-      "totalFailures": 71,
-      "flakyCount": 57,
+      "totalFailures": 73,
+      "flakyCount": 60,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 3,
+      "uniquePRs": 4,
       "uniqueDates": [
         "2026-11-11",
         "2026-11-10"
@@ -24,13 +24,13 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "count": 5,
+          "count": 7,
           "flakyCount": 3,
           "mergedCount": 0
         },
@@ -164,12 +164,24 @@
       "recentOccurrences": [
         {
           "date": "2026-11-11",
-          "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
-          "jobId": "130271960246",
-          "runId": "42942480345",
+          "prNumber": "14370",
+          "prTitle": "runtime-rs: fix two races in the cleanup after a shim was killed",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "130488932273",
+          "runId": "43007521915",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-11",
+          "prNumber": "14370",
+          "prTitle": "runtime-rs: fix two races in the cleanup after a shim was killed",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "130488932273",
+          "runId": "43007521915",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
@@ -177,25 +189,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-11",
+          "prNumber": "14340",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
+          "jobId": "130271960246",
+          "runId": "42942480345",
+          "runAttempt": 1,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -1020,7 +1044,7 @@
       "name": "ConfigMap propagation to volume-mounted pod",
       "file": "k8s-configmap.bats",
       "totalFailures": 71,
-      "flakyCount": 59,
+      "flakyCount": 62,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -1034,7 +1058,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -1182,37 +1206,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -2037,7 +2061,7 @@
       "name": "Copy file in a pod",
       "file": "k8s-copy-file.bats",
       "totalFailures": 70,
-      "flakyCount": 57,
+      "flakyCount": 60,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -2051,7 +2075,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -2204,37 +2228,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -3035,7 +3059,7 @@
       "name": "Check capabilities of pod",
       "file": "k8s-caps.bats",
       "totalFailures": 69,
-      "flakyCount": 57,
+      "flakyCount": 60,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -3049,7 +3073,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -3190,37 +3214,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -4021,7 +4045,7 @@
       "name": "ConfigMap for a pod",
       "file": "k8s-configmap.bats",
       "totalFailures": 69,
-      "flakyCount": 57,
+      "flakyCount": 60,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -4035,7 +4059,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -4176,37 +4200,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -5007,7 +5031,7 @@
       "name": "Copy from pod to host",
       "file": "k8s-copy-file.bats",
       "totalFailures": 69,
-      "flakyCount": 57,
+      "flakyCount": 60,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -5021,7 +5045,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -5162,37 +5186,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -5993,7 +6017,7 @@
       "name": "Credentials using secrets",
       "file": "k8s-credentials-secrets.bats",
       "totalFailures": 69,
-      "flakyCount": 57,
+      "flakyCount": 60,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -6007,7 +6031,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -6148,37 +6172,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -6979,7 +7003,7 @@
       "name": "Secret propagation to volume-mounted pod",
       "file": "k8s-credentials-secrets.bats",
       "totalFailures": 69,
-      "flakyCount": 57,
+      "flakyCount": 60,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -6993,7 +7017,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -7134,37 +7158,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -7965,7 +7989,7 @@
       "name": "Test image with no layers cannot run",
       "file": "k8s-empty-image.bats",
       "totalFailures": 63,
-      "flakyCount": 51,
+      "flakyCount": 54,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -7979,7 +8003,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "count": 12,
-          "flakyCount": 0,
+          "flakyCount": 3,
           "mergedCount": 0
         },
         {
@@ -8106,37 +8130,37 @@
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-11-11",
           "prNumber": "14340",
-          "prTitle": "tests: k8s-graceful-termination: attempt workaround",
+          "prTitle": "tests: k8s-graceful-termination: fix race condition",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
           "jobId": "130271960246",
           "runId": "42942480345",
           "runAttempt": 1,
-          "isFlaky": false,
+          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -17691,6 +17715,54 @@
       ]
     },
     {
+      "name": "Check the number vcpus are correctly allocated to the sandbox",
+      "file": "k8s-sandbox-vcpus-allocation.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-11-11"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh, minimum)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh, minimum)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-11-11",
+          "prNumber": "14375",
+          "prTitle": "runtime-rs: clean up qmp.sock in test_block_source_uses_inherited_fdset",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh, minimum)",
+          "jobId": "130820999261",
+          "runId": "43105711322",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-11",
+          "prNumber": "14375",
+          "prTitle": "runtime-rs: clean up qmp.sock in test_block_source_uses_inherited_fdset",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (clh, minimum)",
+          "jobId": "130820999261",
+          "runId": "43105711322",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "Test readonly volume for pods",
       "file": "k8s-file-volume.bats",
       "totalFailures": 2,
@@ -18976,14 +19048,14 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 62,
+    "totalFailedTests": 63,
     "confirmedFlaky": 60,
     "mergedDespiteFailure": 0,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
       "count": 108,
-      "flakyCount": 0,
+      "flakyCount": 27,
       "mergedCount": 0
     },
     "trend": [
@@ -19041,7 +19113,7 @@
       },
       {
         "date": "2026-11-11",
-        "failures": 57
+        "failures": 61
       }
     ],
     "jobBreakdown": [
@@ -19049,7 +19121,7 @@
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu, kubeadm)",
         "count": 108,
-        "flakyCount": 0,
+        "flakyCount": 27,
         "mergedCount": 0
       },
       {
