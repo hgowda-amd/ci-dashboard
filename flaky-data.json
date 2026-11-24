@@ -1,87 +1,1692 @@
 {
-  "lastRefresh": "2026-11-24T02:52:39.690Z",
+  "lastRefresh": "2026-11-24T14:44:48.974Z",
   "periodDays": 14,
-  "totalFailures": 11,
+  "totalFailures": 123,
   "totalPRs": 4,
-  "confirmedFlakyCount": 1,
-  "mergedDespiteFailureCount": 0,
+  "confirmedFlakyCount": 0,
+  "mergedDespiteFailureCount": 2,
   "failedTests": [
     {
-      "name": "Running with postStart and preStop handlers",
-      "file": "k8s-attach-handlers.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "name": "The main container starts once a volume that was slow to open has recovered",
+      "file": "k8s-block-volume-init-container.bats",
+      "totalFailures": 42,
+      "flakyCount": 0,
       "mergedCount": 0,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": false,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
-        "2026-11-23",
-        "2026-11-20"
+        "2026-11-24"
       ],
       "affectedJobs": [
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "count": 2,
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "count": 3,
           "flakyCount": 0,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "count": 2,
-          "flakyCount": 2,
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "count": 3,
+          "flakyCount": 0,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
         {
-          "date": "2026-11-23",
-          "prNumber": "14503",
-          "prTitle": "tests: improve retry logic and unconditionally upload NVIDIA test artifacts",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobId": "138082137484",
-          "runId": "45284226450",
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-11-23",
-          "prNumber": "14503",
-          "prTitle": "tests: improve retry logic and unconditionally upload NVIDIA test artifacts",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-          "jobId": "138082137484",
-          "runId": "45284226450",
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-11-20",
-          "prNumber": "14478",
-          "prTitle": "agent: mounts/storages clean-up improvements",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "jobId": "136608737910",
-          "runId": "44824369891",
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-11-20",
-          "prNumber": "14478",
-          "prTitle": "agent: mounts/storages clean-up improvements",
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-          "jobId": "136608737910",
-          "runId": "44824369891",
+          "jobId": "138486231919",
+          "runId": "45403783878",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobId": "138486233877",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobId": "138486233877",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, latest)",
+          "jobId": "138486233877",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "jobId": "138486234123",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "jobId": "138486234123",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (dragonball, minimum)",
+          "jobId": "138486234123",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
+      "name": "The main container starts after a slow flush of the init container's disk",
+      "file": "k8s-block-volume-init-container.bats",
+      "totalFailures": 36,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-11-24"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
+      "name": "The init container's disk is released after a flush that outlasts its cleanup",
+      "file": "k8s-block-volume-init-container.bats",
+      "totalFailures": 36,
+      "flakyCount": 0,
+      "mergedCount": 0,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-11-24"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "count": 3,
+          "flakyCount": 0,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+          "jobId": "138483572107",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
+          "jobId": "138486231919",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+          "jobId": "138486233327",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+          "jobId": "138486233441",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+          "jobId": "138486233649",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+          "jobId": "138486233729",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+          "jobId": "138486234057",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+          "jobId": "138486234391",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+          "jobId": "138486234445",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+          "jobId": "138486234462",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-dmverity",
+          "jobId": "138486234585",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-24",
+          "prNumber": "14518",
+          "prTitle": "tests: k8s: add tests for a block volume shared by an init container and the main container",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-ppc64le / run-k8s-tests (qemu-runtime-rs, kubeadm)",
+          "jobId": "138486523490",
+          "runId": "45403783878",
+          "runAttempt": 1,
+          "isFlaky": false,
           "prMerged": false
         }
       ]
@@ -147,8 +1752,8 @@
       ]
     },
     {
-      "name": "Plain ephemeral data storage",
-      "file": "k8s-plain-ephemeral-data-storage.bats",
+      "name": "Running with postStart and preStop handlers",
+      "file": "k8s-attach-handlers.bats",
       "totalFailures": 2,
       "flakyCount": 0,
       "mergedCount": 0,
@@ -170,6 +1775,54 @@
       "recentOccurrences": [
         {
           "date": "2026-11-23",
+          "prNumber": "14503",
+          "prTitle": "tests: improve retry logic and unconditionally upload NVIDIA test artifacts",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "138082137484",
+          "runId": "45284226450",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-11-23",
+          "prNumber": "14503",
+          "prTitle": "tests: improve retry logic and unconditionally upload NVIDIA test artifacts",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "jobId": "138082137484",
+          "runId": "45284226450",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        }
+      ]
+    },
+    {
+      "name": "Plain ephemeral data storage",
+      "file": "k8s-plain-ephemeral-data-storage.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-11-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-11-23",
           "prNumber": "14449",
           "prTitle": "dragonball: Advertise NIC hotplug to attach TAP after template restore",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
@@ -178,7 +1831,7 @@
           "runId": "45105294940",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-11-23",
@@ -190,7 +1843,7 @@
           "runId": "45105294940",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         }
       ]
     },
@@ -199,9 +1852,9 @@
       "file": "k8s-policy-pod.bats",
       "totalFailures": 2,
       "flakyCount": 0,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
+      "mergedDespiteFailure": true,
       "uniquePRs": 1,
       "uniqueDates": [
         "2026-11-23"
@@ -212,7 +1865,7 @@
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure, small, containerd)",
           "count": 2,
           "flakyCount": 0,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -226,7 +1879,7 @@
           "runId": "45105294940",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-11-23",
@@ -238,19 +1891,19 @@
           "runId": "45105294940",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         }
       ]
     }
   ],
   "summary": {
-    "totalFailedTests": 4,
-    "confirmedFlaky": 1,
-    "mergedDespiteFailure": 0,
+    "totalFailedTests": 7,
+    "confirmedFlaky": 0,
+    "mergedDespiteFailure": 2,
     "mostAffectedJob": {
-      "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-      "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-      "count": 4,
+      "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+      "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+      "count": 9,
       "flakyCount": 0,
       "mergedCount": 0
     },
@@ -293,7 +1946,7 @@
       },
       {
         "date": "2026-11-20",
-        "failures": 2
+        "failures": 0
       },
       {
         "date": "2026-11-21",
@@ -309,35 +1962,77 @@
       },
       {
         "date": "2026-11-24",
-        "failures": 0
+        "failures": 114
       }
     ],
     "jobBreakdown": [
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu)",
-        "count": 4,
-        "flakyCount": 0,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 3,
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-cpu-arm64 / run-nvidia-cpu-runtime-rs-tests-on-arm64",
+        "count": 9,
         "flakyCount": 0,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-crio / run-k8s-tests-crio (qemu-runtime-rs)",
-        "count": 2,
-        "flakyCount": 2,
+        "count": 9,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure, small, containerd)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh-azure, small, containerd)",
-        "count": 2,
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, minimum)",
+        "count": 9,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv4, bridge)",
+        "count": 9,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, dual, bridge)",
+        "count": 9,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-nvidia-cpu-runtime-rs, latest, erofs, memory, dmverity, ipv6, bridge)",
+        "count": 9,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-free-runner / run-k8s-tests (qemu-runtime-rs, latest)",
+        "count": 9,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-dmverity",
+        "count": 9,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-disk-",
+        "count": 9,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter-memory-",
+        "count": 9,
         "flakyCount": 0,
         "mergedCount": 0
       }
